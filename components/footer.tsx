@@ -1,10 +1,12 @@
+import { Hexagon } from "lucide-react"
+
 export function Footer() {
   const footerLinks = {
-    Features: ["Plan", "Build", "Insights", "Customer Requests", "Sprint Asks", "Security", "Mobile"],
-    Product: ["Pricing", "Method", "Integrations", "Changelog", "Documentation", "Download", "Switch"],
-    Company: ["About", "Customers", "Careers", "Now", "README", "Quality", "Brand"],
-    Resources: ["Developers", "Status", "Startups", "Report vulnerability", "DPA", "Privacy", "Terms"],
-    Connect: ["Contact us", "Community", "X (Twitter)", "GitHub", "YouTube"],
+    Platform: ["Subscriptions", "Payments", "Metering", "Entitlements", "Multi-Chain", "Payment MCP", "A2A Payments"],
+    Developers: ["Documentation", "API Reference", "SDKs", "Changelog", "Status", "GitHub"],
+    Chains: ["Ethereum", "Base", "Polygon", "Arbitrum", "Avalanche", "Optimism"],
+    Company: ["About", "Blog", "Careers", "Customers", "Brand", "Contact"],
+    Legal: ["Privacy", "Terms", "DPA", "Security", "Report Vulnerability"],
   }
 
   return (
@@ -13,16 +15,10 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
           {/* Logo */}
           <div className="col-span-2 md:col-span-1">
-            <svg width="20" height="20" viewBox="0 0 100 100" fill="none" className="text-white">
-              <path
-                d="M20 30 L50 10 L80 30 L80 70 L50 90 L20 70 Z"
-                fill="currentColor"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-              <path d="M50 10 L50 50 L20 30" fill="#09090B" />
-              <path d="M50 50 L80 70 L50 90" fill="#09090B" />
-            </svg>
+            <Hexagon className="w-5 h-5 text-indigo-400" />
+            <p className="mt-4 text-xs text-zinc-600">
+              © {new Date().getFullYear()} Galactic
+            </p>
           </div>
 
           {/* Links */}

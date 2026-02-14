@@ -3,25 +3,24 @@
 import type React from "react"
 import { motion } from "framer-motion"
 import {
-  Inbox,
-  CircleUser,
+  BarChart3,
+  CreditCard,
   Layers,
-  FolderKanban,
-  LayoutGrid,
+  Settings,
   Users,
-  Smartphone,
-  Map,
-  FileText,
+  Wallet,
   ChevronDown,
   ChevronRight,
-  CirclePower,
+  Hexagon,
   Search,
   Plus,
   Link2,
   MoreHorizontal,
-  Sparkles,
-  Settings,
+  Zap,
   HelpCircle,
+  Shield,
+  Globe,
+  Bot,
 } from "lucide-react"
 
 export function DashboardMockup() {
@@ -67,8 +66,8 @@ export function DashboardMockup() {
         {/* Logo */}
         <div className="p-3 border-b border-zinc-800/50">
           <div className="flex items-center gap-2 px-2 py-1.5">
-            <CirclePower className="w-5 h-5 text-white" />
-            <span className="text-white font-semibold text-sm">Sprint</span>
+            <Hexagon className="w-5 h-5 text-indigo-400" />
+            <span className="text-white font-semibold text-sm">Galactic</span>
             <ChevronDown className="w-3.5 h-3.5 text-zinc-500 ml-auto" />
           </div>
         </div>
@@ -84,59 +83,61 @@ export function DashboardMockup() {
 
         {/* Main nav */}
         <div className="px-3 space-y-0.5">
-          <NavItem icon={Inbox} label="Inbox" badge={3} active />
-          <NavItem icon={CircleUser} label="My Issues" />
+          <NavItem icon={BarChart3} label="Overview" active />
+          <NavItem icon={CreditCard} label="Subscriptions" badge={12} />
         </div>
 
-        {/* Workspace section */}
+        {/* Billing section */}
         <div className="mt-5 px-3">
           <div className="px-2 py-1 text-[10px] text-zinc-500 font-medium uppercase tracking-wider flex items-center gap-1">
-            Workspace
+            Billing
           </div>
           <div className="space-y-0.5 mt-1">
-            <NavItem icon={Layers} label="Initiatives" hasSubmenu />
-            <NavItem icon={FolderKanban} label="Projects" hasSubmenu />
-            <NavItem icon={LayoutGrid} label="Views" hasSubmenu />
-            <NavItem icon={Users} label="Teams" hasSubmenu />
+            <NavItem icon={Wallet} label="Payments" hasSubmenu />
+            <NavItem icon={Layers} label="Plans" hasSubmenu />
+            <NavItem icon={Zap} label="Metering" hasSubmenu />
+            <NavItem icon={Shield} label="Entitlements" hasSubmenu />
           </div>
         </div>
 
-        {/* Favorites section */}
+        {/* Integrations section */}
         <div className="mt-5 px-3">
           <div className="px-2 py-1 text-[10px] text-zinc-500 font-medium uppercase tracking-wider flex items-center gap-1">
-            Favorites
+            AI & Agents
           </div>
           <div className="space-y-0.5 mt-1">
-            <NavItem icon={Smartphone} label="Mobile App" color="text-blue-400" />
-            <NavItem icon={Map} label="Q1 Roadmap" color="text-orange-400" />
-            <NavItem icon={FileText} label="API Docs" color="text-emerald-400" />
+            <NavItem icon={Bot} label="Payment MCP" color="text-indigo-400" />
+            <NavItem icon={Users} label="A2A Payments" color="text-emerald-400" />
+            <NavItem icon={Globe} label="Multi-Chain" color="text-orange-400" />
           </div>
         </div>
 
-        {/* Teams section */}
+        {/* Chains section */}
         <div className="mt-5 px-3 flex-1">
           <div className="px-2 py-1 text-[10px] text-zinc-500 font-medium uppercase tracking-wider flex items-center gap-1">
-            Your Teams
+            Chains
           </div>
           <div className="space-y-0.5 mt-1">
-            <NavItem icon={Sparkles} label="Product" hasSubmenu />
-            <NavItem icon={Settings} label="Engineering" hasSubmenu />
+            <NavItem icon={Hexagon} label="Ethereum" hasSubmenu />
+            <NavItem icon={Hexagon} label="Base" hasSubmenu />
+            <NavItem icon={Hexagon} label="Polygon" hasSubmenu />
           </div>
         </div>
 
         {/* Bottom */}
         <div className="p-3 border-t border-zinc-800/50">
-          <NavItem icon={HelpCircle} label="Help & Support" />
+          <NavItem icon={Settings} label="Settings" />
+          <NavItem icon={HelpCircle} label="Documentation" />
         </div>
       </motion.div>
 
-      {/* Inbox List */}
+      {/* Subscriptions List */}
       <motion.div
         className="w-[320px] h-full bg-zinc-900/40 border-r border-zinc-800/50 flex flex-col shrink-0"
         variants={panelVariants}
       >
         <div className="px-4 py-3 border-b border-zinc-800/50 flex items-center justify-between">
-          <h3 className="text-white font-semibold text-sm">Inbox</h3>
+          <h3 className="text-white font-semibold text-sm">Subscriptions</h3>
           <div className="flex items-center gap-2">
             <button className="text-zinc-500 hover:text-white transition-colors">
               <Plus className="w-4 h-4" />
@@ -145,69 +146,70 @@ export function DashboardMockup() {
         </div>
 
         <div className="flex-1 overflow-auto scrollbar-hide">
-          <InboxItem
-            id="ENG-135"
-            title="Refactor sonic crawler"
-            subtitle="nan assigned you"
-            time="2h"
-            avatar="https://i.pravatar.cc/32?img=1"
-            status="in-progress"
+          <SubscriptionItem
+            id="SUB-001"
+            title="DeFi Protocol Alpha"
+            subtitle="Pro Plan · 500 USDC/mo"
+            time="Active"
+            chain="Ethereum"
+            status="active"
             active
           />
-          <InboxItem
-            id="LLM"
-            title="LLM Chatbot"
-            subtitle="New project update by raissa"
-            time="1d"
-            avatar="https://i.pravatar.cc/32?img=2"
-            status="todo"
-            isProject
+          <SubscriptionItem
+            id="SUB-002"
+            title="AI Agent Swarm"
+            subtitle="A2A Plan · Usage-based"
+            time="Active"
+            chain="Base"
+            status="active"
           />
-          <InboxItem
-            id="ENG-159"
-            title="Error uploading images via API"
-            subtitle="SLA breached"
-            time="2d"
-            avatar="https://i.pravatar.cc/32?img=3"
-            status="bug"
+          <SubscriptionItem
+            id="SUB-003"
+            title="NFT Marketplace"
+            subtitle="Enterprise · 2,000 USDC/mo"
+            time="Active"
+            chain="Polygon"
+            status="active"
           />
-          <InboxItem
-            id="DES-498"
-            title="Redesign users settings..."
-            subtitle="karri mentioned you"
-            time="4h"
-            avatar="https://i.pravatar.cc/32?img=4"
-            status="todo"
+          <SubscriptionItem
+            id="SUB-004"
+            title="DAO Governance Tool"
+            subtitle="Starter · 50 USDC/mo"
+            time="Trial"
+            chain="Arbitrum"
+            status="trial"
           />
-          <InboxItem
-            id="ENG-160"
-            title="Holtzmann engine is broken"
-            subtitle="You asked to be reminded"
-            time="1w"
-            avatar="https://i.pravatar.cc/32?img=5"
-            status="bug"
+          <SubscriptionItem
+            id="SUB-005"
+            title="GameFi Studio"
+            subtitle="Pro Plan · 500 USDC/mo"
+            time="Churned"
+            chain="Base"
+            status="churned"
           />
-          <InboxItem
-            title="Sign up flow experiments"
-            subtitle="Added as project member"
-            avatar="https://i.pravatar.cc/32?img=6"
-            status="done"
-            isProject
+          <SubscriptionItem
+            id="SUB-006"
+            title="Data Oracle Network"
+            subtitle="Credit Model · Pay-per-query"
+            time="Active"
+            chain="Ethereum"
+            status="active"
           />
-          <InboxItem
-            id="MKT-122"
-            title="Design assets for marketing"
-            subtitle="erin marked as Duplicate"
-            time="1w"
-            avatar="https://i.pravatar.cc/32?img=7"
-            status="done"
+          <SubscriptionItem
+            id="SUB-007"
+            title="Web3 Social App"
+            subtitle="Growth · 200 USDC/mo"
+            time="Active"
+            chain="Polygon"
+            status="active"
           />
-          <InboxItem
-            title="Homepage v3"
-            subtitle="New project update by paco"
-            avatar="https://i.pravatar.cc/32?img=8"
-            status="todo"
-            isProject
+          <SubscriptionItem
+            id="MCP-001"
+            title="Claude Agent Billing"
+            subtitle="MCP Auto · 0.002 USDC/call"
+            time="Active"
+            chain="Base"
+            status="active"
           />
         </div>
       </motion.div>
@@ -217,59 +219,83 @@ export function DashboardMockup() {
         {/* Header breadcrumb */}
         <div className="px-5 py-3 border-b border-zinc-800/50 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-1.5 text-xs">
-            <span className="text-zinc-500">Engineering</span>
+            <span className="text-zinc-500">Subscriptions</span>
             <span className="text-zinc-600">›</span>
-            <span className="text-emerald-400">Spice harvester</span>
+            <span className="text-indigo-400">DeFi Protocol Alpha</span>
             <span className="text-zinc-600">›</span>
-            <span className="text-zinc-300">ENG-135</span>
+            <span className="text-zinc-300">SUB-001</span>
           </div>
           <MoreHorizontal className="w-4 h-4 text-zinc-500" />
         </div>
 
         {/* Content */}
         <div className="flex-1 p-5 overflow-auto scrollbar-hide">
-          <h2 className="text-white text-xl font-semibold mb-5">Refactor sonic crawler</h2>
+          <h2 className="text-white text-xl font-semibold mb-5">DeFi Protocol Alpha</h2>
 
-          {/* Code block */}
+          {/* Stats Row */}
+          <div className="grid grid-cols-3 gap-3 mb-5">
+            <div className="bg-zinc-900/80 rounded-lg p-3 border border-zinc-800/50">
+              <p className="text-zinc-500 text-[10px] uppercase tracking-wider mb-1">MRR</p>
+              <p className="text-white text-lg font-semibold">$24,500</p>
+              <p className="text-emerald-400 text-[10px]">↑ 12.5%</p>
+            </div>
+            <div className="bg-zinc-900/80 rounded-lg p-3 border border-zinc-800/50">
+              <p className="text-zinc-500 text-[10px] uppercase tracking-wider mb-1">API Calls</p>
+              <p className="text-white text-lg font-semibold">1.2M</p>
+              <p className="text-emerald-400 text-[10px]">↑ 8.3%</p>
+            </div>
+            <div className="bg-zinc-900/80 rounded-lg p-3 border border-zinc-800/50">
+              <p className="text-zinc-500 text-[10px] uppercase tracking-wider mb-1">Active Chains</p>
+              <p className="text-white text-lg font-semibold">6</p>
+              <p className="text-zinc-400 text-[10px]">EVM chains</p>
+            </div>
+          </div>
+
+          {/* Plan details */}
           <div className="bg-zinc-900/80 rounded-lg p-4 text-[11px] font-mono mb-5 border border-zinc-800/50">
             <div className="space-y-2">
               <div>
-                <span className="text-zinc-500">Comment.</span>
-                <span className="text-amber-300">documentContent</span>
-                <span className="text-zinc-400"> is defined wrongly. It should be a </span>
-                <span className="text-cyan-300">LazyManyToOne</span>
-                <span className="text-zinc-400"> relation.</span>
-              </div>
-              <div className="mt-3 text-zinc-600">
-                {/* The document content that this comment is associated with. */}
+                <span className="text-purple-400">plan</span>
+                <span className="text-zinc-400">: </span>
+                <span className="text-emerald-400">"Pro"</span>
               </div>
               <div>
-                <span className="text-purple-400">@ManyToOne</span>
-                <span className="text-zinc-400">(</span>
-                <span className="text-cyan-300">DocumentContent</span>
-                <span className="text-zinc-400">,</span>
-                <span className="text-amber-300">comments</span>
-                <span className="text-zinc-400">,</span>
-                <span className="text-amber-300">cascade</span>
-                <span className="text-zinc-400">:</span>
-                <span className="text-orange-300">true</span>
-                <span className="text-zinc-400">,</span>
-                <span className="text-amber-300">nullable</span>
-                <span className="text-zinc-400">:</span>
-                <span className="text-orange-300">false</span>
-                <span className="text-zinc-400">)</span>
+                <span className="text-purple-400">price</span>
+                <span className="text-zinc-400">: </span>
+                <span className="text-amber-300">500</span>
+                <span className="text-zinc-500"> // USDC per month</span>
               </div>
               <div>
-                <span className="text-blue-400">public </span>
-                <span className="text-amber-300">documentContent</span>
-                <span className="text-zinc-400">?: </span>
-                <span className="text-cyan-300">DocumentContent</span>
-                <span className="text-zinc-400">;</span>
+                <span className="text-purple-400">chain</span>
+                <span className="text-zinc-400">: </span>
+                <span className="text-emerald-400">"ethereum"</span>
               </div>
-              <div className="mt-3 text-zinc-400">
-                We would be accessing
-                <span className="text-emerald-400">CachedPromise&lt;DocumentContent&gt;</span>
-                then, and document content would be hydrated.
+              <div>
+                <span className="text-purple-400">features</span>
+                <span className="text-zinc-400">: [</span>
+                <span className="text-emerald-400">"api_access"</span>
+                <span className="text-zinc-400">, </span>
+                <span className="text-emerald-400">"webhooks"</span>
+                <span className="text-zinc-400">, </span>
+                <span className="text-emerald-400">"analytics"</span>
+                <span className="text-zinc-400">]</span>
+              </div>
+              <div>
+                <span className="text-purple-400">metering</span>
+                <span className="text-zinc-400">: {"{"} </span>
+                <span className="text-amber-300">api_calls</span>
+                <span className="text-zinc-400">: </span>
+                <span className="text-amber-300">100000</span>
+                <span className="text-zinc-400">, </span>
+                <span className="text-amber-300">seats</span>
+                <span className="text-zinc-400">: </span>
+                <span className="text-amber-300">25</span>
+                <span className="text-zinc-400"> {"}"}</span>
+              </div>
+              <div>
+                <span className="text-purple-400">wallet</span>
+                <span className="text-zinc-400">: </span>
+                <span className="text-cyan-300">0x1a2b...9f8e</span>
               </div>
             </div>
           </div>
@@ -278,38 +304,36 @@ export function DashboardMockup() {
           <div className="space-y-2 text-sm mb-5">
             <div className="flex items-center gap-2 text-zinc-500 hover:text-zinc-300 cursor-pointer transition-colors">
               <Plus className="w-4 h-4" />
-              <span>Add sub-issues</span>
+              <span>Add entitlement override</span>
             </div>
             <div className="flex items-center gap-2 text-zinc-500 hover:text-zinc-300 cursor-pointer transition-colors">
               <Link2 className="w-4 h-4" />
-              <span>Links</span>
+              <span>View on-chain transaction</span>
             </div>
-          </div>
-
-          {/* PR reference */}
-          <div className="text-xs text-zinc-500 mb-5">
-            <span className="text-zinc-600">#20319</span>
-            <span> igor/eng-135 add source to insights slice and segment</span>
           </div>
 
           {/* Activity */}
           <div className="pt-4 border-t border-zinc-800/50">
-            <div className="text-xs text-zinc-500 font-medium mb-3 uppercase tracking-wider">Activity</div>
+            <div className="text-xs text-zinc-500 font-medium mb-3 uppercase tracking-wider">Payment Activity</div>
             <div className="space-y-3">
               <ActivityItem
-                avatar="https://i.pravatar.cc/24?img=1"
-                name="nan"
-                action="moved from"
-                from="Backlog"
-                to="In Progress"
-                time="5 months ago"
+                name="Auto-renewal"
+                action="charged"
+                from="500 USDC"
+                to="via Ethereum"
+                time="2 days ago"
               />
               <ActivityItem
-                avatar="https://i.pravatar.cc/24?img=2"
-                name="alex"
-                action="commented on"
-                from="this issue"
-                time="5 months ago"
+                name="MCP Agent"
+                action="checked entitlement"
+                from="api_access"
+                time="5 hours ago"
+              />
+              <ActivityItem
+                name="Usage meter"
+                action="recorded"
+                from="12,340 API calls"
+                time="1 hour ago"
               />
             </div>
           </div>
@@ -352,30 +376,35 @@ function NavItem({
   )
 }
 
-function InboxItem({
+function SubscriptionItem({
   id,
   title,
   subtitle,
   time,
-  avatar,
+  chain,
   status,
-  isProject,
   active,
 }: {
   id?: string
   title: string
   subtitle?: string
   time?: string
-  avatar: string
+  chain?: string
   status: string
-  isProject?: boolean
   active?: boolean
 }) {
   const statusColors: Record<string, string> = {
-    "in-progress": "bg-yellow-500",
-    todo: "bg-zinc-600",
-    bug: "bg-red-500",
-    done: "bg-emerald-500",
+    active: "bg-emerald-500",
+    trial: "bg-amber-500",
+    churned: "bg-red-500",
+    paused: "bg-zinc-500",
+  }
+
+  const chainColors: Record<string, string> = {
+    Ethereum: "text-blue-400",
+    Base: "text-indigo-400",
+    Polygon: "text-purple-400",
+    Arbitrum: "text-cyan-400",
   }
 
   return (
@@ -385,11 +414,13 @@ function InboxItem({
       }`}
     >
       <div className="flex items-start gap-3">
-        <img src={avatar || "/placeholder.svg"} alt="" className="w-8 h-8 rounded-full shrink-0 mt-0.5" />
+        <div className="w-8 h-8 rounded-lg bg-zinc-800 border border-zinc-700/50 flex items-center justify-center shrink-0 mt-0.5">
+          <Hexagon className="w-4 h-4 text-indigo-400" />
+        </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-0.5">
             {id && <span className="text-zinc-500 text-[10px]">{id}</span>}
-            {isProject && <span className="text-violet-400 text-[10px]">Project</span>}
+            {chain && <span className={`text-[10px] ${chainColors[chain] || "text-zinc-400"}`}>{chain}</span>}
             <div className={`w-2 h-2 rounded-full ${statusColors[status] || "bg-zinc-500"}`} />
           </div>
           <p className="text-white text-xs truncate leading-tight">{title}</p>
@@ -402,14 +433,12 @@ function InboxItem({
 }
 
 function ActivityItem({
-  avatar,
   name,
   action,
   from,
   to,
   time,
 }: {
-  avatar: string
   name: string
   action: string
   from: string
@@ -418,7 +447,9 @@ function ActivityItem({
 }) {
   return (
     <div className="flex items-start gap-2">
-      <img src={avatar || "/placeholder.svg"} alt="" className="w-5 h-5 rounded-full" />
+      <div className="w-5 h-5 rounded-full bg-zinc-800 border border-zinc-700/50 flex items-center justify-center">
+        <Zap className="w-3 h-3 text-indigo-400" />
+      </div>
       <div className="flex-1">
         <p className="text-zinc-400 text-xs">
           <span className="text-white">{name}</span>
@@ -426,7 +457,7 @@ function ActivityItem({
           <span className="text-zinc-300">{from}</span>
           {to && (
             <>
-              <span className="text-zinc-500"> to </span>
+              <span className="text-zinc-500"> → </span>
               <span className="text-zinc-300">{to}</span>
             </>
           )}

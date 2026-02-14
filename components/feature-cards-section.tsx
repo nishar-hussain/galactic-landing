@@ -5,76 +5,99 @@ import { ChevronRight, Plus } from "lucide-react"
 
 const featureCards = [
   {
-    title: "Project planning for scrum",
+    title: "Stablecoin subscriptions on any EVM chain",
     illustration: (
-      <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-lg">
-        <svg
-          width="100%"
-          height="100%"
-          viewBox="0 0 791 669"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="max-w-full max-h-full"
-        >
-          <path
-            opacity="0.25"
-            d="M377.449 24.2664L22.1248 192.099C9.24419 198.183 1.16249 211.29 1.51081 225.531L10.925 610.428C11.5763 637.054 39.9132 653.778 63.5378 641.48L409.448 461.403C421.355 455.204 428.824 442.895 428.824 429.471V56.8179C428.824 30.407 401.33 12.9865 377.449 24.2664Z"
-            fill="#2C2C2C"
-            fillOpacity="0.8"
-            stroke="#424242"
-            strokeWidth="3"
-          />
-          <path
-            opacity="0.25"
-            d="M497.594 24.2664L142.269 192.099C129.389 198.183 121.307 211.29 121.655 225.531L131.07 610.428C131.721 637.054 160.058 653.778 183.682 641.48L529.592 461.403C541.5 455.204 548.969 442.895 548.969 429.471V56.8179C548.969 30.407 521.475 12.9865 497.594 24.2664Z"
-            fill="#2C2C2C"
-            fillOpacity="0.8"
-            stroke="#424242"
-            strokeWidth="3"
-          />
-          <path
-            opacity="0.25"
-            d="M617.738 24.2664L262.414 192.099C249.533 198.183 241.451 211.29 241.8 225.531L251.214 610.428C251.865 637.054 280.202 653.778 303.827 641.48L649.737 461.403C661.644 455.204 669.113 442.895 669.113 429.471V56.8179C669.113 30.407 641.619 12.9865 617.738 24.2664Z"
-            fill="#2C2C2C"
-            fillOpacity="0.8"
-            stroke="#424242"
-            strokeWidth="3"
-          />
-          <path
-            opacity="0.25"
-            d="M737.883 24.2664L382.558 192.099C369.678 198.183 361.596 211.29 361.944 225.531L371.358 610.428C372.01 637.054 400.347 653.778 423.971 641.48L769.881 461.403C781.789 455.204 789.258 442.895 789.258 429.471V56.8179C789.258 30.407 761.764 12.9865 737.883 24.2664Z"
-            fill="#2C2C2C"
-            fillOpacity="0.8"
-            stroke="#424242"
-            strokeWidth="3"
-          />
-        </svg>
+      <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-lg p-6">
+        <div className="flex flex-col gap-3 w-full">
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center">
+              <span className="text-blue-400 text-xs font-bold">$</span>
+            </div>
+            <span className="text-zinc-300 text-sm font-medium">USDC</span>
+            <span className="text-emerald-400 text-xs ml-auto">Active</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center">
+              <span className="text-green-400 text-xs font-bold">₮</span>
+            </div>
+            <span className="text-zinc-300 text-sm font-medium">USDT</span>
+            <span className="text-emerald-400 text-xs ml-auto">Active</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 rounded-full bg-amber-500/20 flex items-center justify-center">
+              <span className="text-amber-400 text-xs font-bold">◈</span>
+            </div>
+            <span className="text-zinc-300 text-sm font-medium">DAI</span>
+            <span className="text-emerald-400 text-xs ml-auto">Active</span>
+          </div>
+          <div className="mt-2 bg-zinc-800/50 rounded-lg p-3 border border-zinc-700/30">
+            <div className="text-[10px] text-zinc-500 mb-1">Monthly recurring</div>
+            <div className="text-white text-lg font-semibold">$24,500 <span className="text-zinc-500 text-sm font-normal">USDC</span></div>
+          </div>
+        </div>
       </div>
     ),
   },
   {
-    title: "Iteration management for scaling",
+    title: "Usage metering & smart entitlements",
     illustration: (
-      <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
-        <img
-          src="/images/speed-lines.png"
-          alt="Speed lines illustration"
-          className="w-full h-full object-cover"
-          style={{ filter: "invert(1)" }}
-        />
+      <div className="relative w-full h-full flex items-center justify-center overflow-hidden p-6">
+        <div className="flex flex-col gap-3 w-full">
+          <div className="bg-zinc-800/50 rounded-lg p-3 border border-zinc-700/30">
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-zinc-400 text-xs">API Calls</span>
+              <span className="text-zinc-300 text-xs">82,340 / 100,000</span>
+            </div>
+            <div className="w-full h-1.5 bg-zinc-700 rounded-full">
+              <div className="h-full bg-indigo-500 rounded-full" style={{ width: "82%" }} />
+            </div>
+          </div>
+          <div className="bg-zinc-800/50 rounded-lg p-3 border border-zinc-700/30">
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-zinc-400 text-xs">Seats</span>
+              <span className="text-zinc-300 text-xs">18 / 25</span>
+            </div>
+            <div className="w-full h-1.5 bg-zinc-700 rounded-full">
+              <div className="h-full bg-emerald-500 rounded-full" style={{ width: "72%" }} />
+            </div>
+          </div>
+          <div className="bg-zinc-800/50 rounded-lg p-3 border border-zinc-700/30">
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-zinc-400 text-xs">Credits</span>
+              <span className="text-amber-400 text-xs">23 remaining</span>
+            </div>
+            <div className="w-full h-1.5 bg-zinc-700 rounded-full">
+              <div className="h-full bg-amber-500 rounded-full" style={{ width: "23%" }} />
+            </div>
+          </div>
+        </div>
       </div>
     ),
   },
   {
-    title: "When precision matters",
+    title: "On-chain recurring payments — sign once, auto renew",
     illustration: (
-      <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
-        <img
-          src="/images/precision-workflow.png"
-          alt="Precision workflow illustration"
-          className="w-full h-full object-cover"
-          style={{ filter: "invert(1)" }}
-        />
+      <div className="relative w-full h-full flex items-center justify-center overflow-hidden p-6">
+        <div className="flex flex-col gap-2 w-full">
+          <div className="flex items-center gap-2 bg-zinc-800/50 rounded-lg p-3 border border-zinc-700/30">
+            <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="text-zinc-300 text-xs">Auto-pull via ERC20 allowance</span>
+          </div>
+          <div className="flex items-center gap-2 bg-zinc-800/50 rounded-lg p-3 border border-zinc-700/30">
+            <div className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse" />
+            <span className="text-zinc-300 text-xs">Superfluid streaming</span>
+          </div>
+          <div className="flex items-center gap-2 bg-zinc-800/50 rounded-lg p-3 border border-zinc-700/30">
+            <div className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
+            <span className="text-zinc-300 text-xs">Account abstraction flow</span>
+          </div>
+          <div className="mt-2 text-center">
+            <div className="inline-flex items-center gap-1.5 text-emerald-400 text-xs bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/20">
+              <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+              Next renewal in 14 days
+            </div>
+          </div>
+        </div>
       </div>
     ),
   },
@@ -107,7 +130,7 @@ export function FeatureCardsSection() {
                 lineHeight: 1.1,
               }}
             >
-              Made for modern product teams
+              Crypto-native billing infrastructure
             </motion.h2>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -117,10 +140,9 @@ export function FeatureCardsSection() {
               className="max-w-md"
             >
               <p className="text-zinc-400 leading-relaxed">
-                Sprint is shaped by the practices and principles that distinguish world-class product teams from the
-                rest: relentless focus, fast execution, and a commitment to the quality of craft.{" "}
+                Galactic replaces Stripe for Web3. Charge in stablecoins, meter usage on-chain, gate features by subscription, and let AI agents manage billing autonomously.{" "}
                 <a href="#" className="text-white inline-flex items-center gap-1 hover:underline">
-                  Make the switch <ChevronRight className="w-4 h-4" />
+                  View documentation <ChevronRight className="w-4 h-4" />
                 </a>
               </p>
             </motion.div>

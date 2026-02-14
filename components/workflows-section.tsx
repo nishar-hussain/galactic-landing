@@ -1,174 +1,169 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronLeft, ChevronRight, Plus, ArrowRight, MessageSquare, GitBranch, X, Puzzle, Figma } from "lucide-react"
+import { ChevronLeft, ChevronRight, Plus, ArrowRight, Wallet, Code2, Bot, Puzzle, Shield } from "lucide-react"
 
 const carouselCards = [
   {
     id: 1,
-    category: "Customer Requests",
-    title: "Build what customers actually want",
+    category: "JavaScript / TypeScript SDK",
+    title: "Integrate billing in 5 lines of code",
     icon: ArrowRight,
-    mockup: "intercom",
+    mockup: "jssdk",
   },
   {
     id: 2,
-    category: "Powerful git workflows",
-    title: "Automate pull requests and commit workflows",
+    category: "React SDK",
+    title: "Drop-in checkout, pricing tables, and portals",
     icon: Plus,
-    mockup: "github",
+    mockup: "reactsdk",
   },
   {
     id: 3,
-    category: "Sprint Mobile",
-    title: "Move product work forward from anywhere",
+    category: "Checkout Widget",
+    title: "Wallet connect + stablecoin payment in one component",
     icon: ArrowRight,
-    mockup: "mobile",
+    mockup: "checkout",
   },
   {
     id: 4,
-    category: "Sprint Asks",
-    title: "Turn workplace requests into actionable issues",
+    category: "Payment MCP",
+    title: "Let AI agents manage billing autonomously",
     icon: ArrowRight,
-    mockup: "asks",
+    mockup: "mcp",
   },
   {
     id: 5,
-    category: "Sprint Integrations",
-    title: "100+ ways to enhance your Sprint experience",
+    category: "Multi-Chain Support",
+    title: "Deploy on Ethereum, Base, Polygon, Arbitrum, and more",
     icon: ArrowRight,
-    mockup: "integrations",
+    mockup: "multichain",
   },
   {
     id: 6,
-    category: "Figma Integration",
-    title: "Bridge the gap between engineering and design",
+    category: "Smart Contracts",
+    title: "Audited subscription and escrow contracts",
     icon: ArrowRight,
-    mockup: "figma",
+    mockup: "contracts",
   },
   {
     id: 7,
-    category: "Built for developers",
-    title: "Build your own add-ons with the Sprint API",
+    category: "REST & GraphQL API",
+    title: "Full programmatic control over billing infrastructure",
     icon: ArrowRight,
     mockup: "api",
   },
 ]
 
-function IntercomMockup() {
+function JsSdkMockup() {
   return (
-    <div className="flex flex-col gap-3 p-4">
-      <div className="flex items-center gap-2 text-xs text-zinc-400">
-        <MessageSquare className="w-3.5 h-3.5" />
-        <span>Intercom</span>
-        <span className="text-zinc-600">·</span>
-        <span className="text-zinc-500">zoe@acme.inc</span>
+    <div className="flex flex-col gap-2 p-4 font-mono text-[11px]">
+      <div className="flex items-center gap-2 text-xs text-zinc-400 mb-1">
+        <Code2 className="w-3.5 h-3.5" />
+        <span>galactic.ts</span>
       </div>
-      <p className="text-sm text-zinc-300">
-        We need a cost breakdown <span className="text-zinc-500">across...</span>
-      </p>
+      <div>
+        <span className="text-purple-400">import</span>
+        <span className="text-zinc-400"> {"{"} Galactic {"}"} </span>
+        <span className="text-purple-400">from</span>
+        <span className="text-green-400"> &apos;@galactic/sdk&apos;</span>
+      </div>
+      <div className="mt-1">
+        <span className="text-purple-400">const</span>
+        <span className="text-amber-300"> client</span>
+        <span className="text-zinc-400"> = </span>
+        <span className="text-cyan-300">Galactic</span>
+        <span className="text-zinc-400">(</span>
+        <span className="text-green-400">&apos;sk_live_...&apos;</span>
+        <span className="text-zinc-400">)</span>
+      </div>
+      <div className="mt-1">
+        <span className="text-purple-400">const</span>
+        <span className="text-amber-300"> allowed</span>
+        <span className="text-zinc-400"> = </span>
+        <span className="text-purple-400">await</span>
+        <span className="text-cyan-300"> client</span>
+        <span className="text-zinc-400">.checkEntitlement(</span>
+      </div>
+      <div className="pl-4">
+        <span className="text-green-400">&apos;api_access&apos;</span>
+        <span className="text-zinc-400">, wallet)</span>
+      </div>
+    </div>
+  )
+}
 
-      <div className="mt-2 flex items-center gap-2 bg-zinc-800/50 rounded-lg px-3 py-2">
-        <div className="w-5 h-5 bg-zinc-700 rounded flex items-center justify-center">
-          <span className="text-[10px] text-zinc-400">A</span>
+function ReactSdkMockup() {
+  return (
+    <div className="flex flex-col gap-2 p-4 font-mono text-[11px]">
+      <div className="flex items-center gap-2 text-xs text-zinc-400 mb-1">
+        <Code2 className="w-3.5 h-3.5 text-cyan-400" />
+        <span>PricingTable.tsx</span>
+      </div>
+      <div>
+        <span className="text-zinc-400">&lt;</span>
+        <span className="text-cyan-300">GalacticPricing</span>
+      </div>
+      <div className="pl-4">
+        <span className="text-amber-300">chain</span>
+        <span className="text-zinc-400">=</span>
+        <span className="text-green-400">&quot;base&quot;</span>
+      </div>
+      <div className="pl-4">
+        <span className="text-amber-300">currency</span>
+        <span className="text-zinc-400">=</span>
+        <span className="text-green-400">&quot;USDC&quot;</span>
+      </div>
+      <div className="pl-4">
+        <span className="text-amber-300">theme</span>
+        <span className="text-zinc-400">=</span>
+        <span className="text-green-400">&quot;dark&quot;</span>
+      </div>
+      <div>
+        <span className="text-zinc-400">/&gt;</span>
+      </div>
+    </div>
+  )
+}
+
+function CheckoutMockup() {
+  return (
+    <div className="flex items-center justify-center h-full p-4">
+      <div className="w-full max-w-[200px] bg-zinc-900 rounded-xl border border-zinc-700 p-4">
+        <div className="text-center mb-3">
+          <Wallet className="w-6 h-6 text-indigo-400 mx-auto mb-2" />
+          <div className="text-zinc-300 text-xs font-medium">Pay with wallet</div>
         </div>
-        <span className="text-sm text-zinc-300">ACME</span>
-        <span className="text-xs text-zinc-500">New request</span>
-      </div>
-
-      <div className="mt-1 flex items-center gap-2 bg-zinc-800/30 rounded-lg px-3 py-2">
-        <div className="w-5 h-5 bg-yellow-500/20 rounded flex items-center justify-center">
-          <span className="text-[10px] text-yellow-500">◆</span>
+        <div className="bg-zinc-800/50 rounded-lg px-3 py-2 text-center mb-2">
+          <span className="text-white text-sm font-semibold">500 USDC</span>
         </div>
-        <span className="text-sm text-zinc-400">Multi-cloud cost</span>
-        <span className="text-xs text-zinc-500">dashboard</span>
-      </div>
-
-      <div className="mt-1 flex items-center gap-2 px-3 py-2">
-        <div className="w-4 h-4 rounded-full border border-zinc-600" />
-        <span className="text-sm text-zinc-500">Planning</span>
-        <div className="ml-2 flex items-center gap-1 text-xs text-zinc-600">
-          <span>📅</span>
-          <span>Q4 2025</span>
+        <div className="bg-indigo-500/20 rounded-lg px-3 py-1.5 text-center">
+          <span className="text-indigo-300 text-[10px]">Connect Wallet</span>
         </div>
       </div>
     </div>
   )
 }
 
-function GitHubMockup() {
+function McpMockup() {
   return (
-    <div className="flex flex-col gap-2 p-4">
-      <div className="flex items-center gap-2 text-xs">
-        <GitBranch className="w-3.5 h-3.5 text-zinc-500" />
-        <span className="text-zinc-400">#20319</span>
-        <span className="text-zinc-500">igor/lin 15287</span>
-        <span className="text-blue-400/70">add sourc...</span>
-      </div>
-
-      <div className="mt-3 space-y-2">
-        <div className="flex items-center gap-2 text-xs">
-          <span className="text-zinc-600">↗</span>
-          <span className="text-zinc-500">igor</span>
-          <span className="text-zinc-600">linked</span>
-          <span className="text-blue-400/70">igor/lin 15287</span>
-          <span className="text-zinc-600">add sou...</span>
-        </div>
-        <div className="flex items-center gap-2 text-xs">
-          <span className="text-zinc-600">↗</span>
-          <span className="text-zinc-500">igor</span>
-          <span className="text-zinc-600">changed status from In Progre...</span>
-        </div>
-        <div className="flex items-center gap-2 text-xs">
-          <span className="text-zinc-600">↗</span>
-          <span className="text-zinc-500">GitHub</span>
-          <span className="text-zinc-600">changed status from In Revie...</span>
-        </div>
-        <div className="flex items-center gap-2 text-xs">
-          <span className="text-zinc-600">↗</span>
-          <span className="text-zinc-500">igor</span>
-          <span className="text-zinc-600">changed status from Ready...</span>
-        </div>
+    <div className="flex items-center justify-center h-full p-4">
+      <div className="text-center">
+        <Bot className="w-10 h-10 text-indigo-400 mx-auto mb-2" />
+        <div className="text-zinc-300 text-xs font-medium mb-1">Payment MCP</div>
+        <div className="text-zinc-500 text-[10px]">AI-native billing API</div>
       </div>
     </div>
   )
 }
 
-function MobileMockup() {
-  return (
-    <div className="flex items-center justify-center h-full">
-      <div className="relative w-32 h-56 bg-zinc-900 rounded-2xl border border-zinc-700 overflow-hidden">
-        <div className="absolute top-2 left-1/2 -translate-x-1/2 w-12 h-1 bg-zinc-800 rounded-full" />
-        <div className="mt-6 px-3">
-          <div className="text-[10px] text-zinc-400 mb-2">Inbox</div>
-          <div className="space-y-1.5">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="h-6 bg-zinc-800/50 rounded" />
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function AsksMockup() {
-  return (
-    <div className="flex items-center justify-center h-full">
-      <div className="w-24 h-24 rounded-2xl bg-zinc-800 flex items-center justify-center">
-        <X className="w-12 h-12 text-zinc-400" strokeWidth={2.5} />
-      </div>
-    </div>
-  )
-}
-
-function IntegrationsMockup() {
+function MultichainMockup() {
   return (
     <div className="flex items-center justify-center h-full">
       <div className="grid grid-cols-2 gap-2">
-        {[1, 2, 3, 4].map((i) => (
-          <div key={i} className="w-10 h-10 rounded-lg bg-zinc-800/50 flex items-center justify-center">
-            <Puzzle className="w-5 h-5 text-zinc-500" />
+        {["ETH", "BASE", "MATIC", "ARB"].map((chain) => (
+          <div key={chain} className="w-12 h-12 rounded-lg bg-zinc-800/50 flex items-center justify-center border border-zinc-700/30">
+            <span className="text-[10px] text-zinc-400 font-medium">{chain}</span>
           </div>
         ))}
       </div>
@@ -176,11 +171,14 @@ function IntegrationsMockup() {
   )
 }
 
-function FigmaMockup() {
+function ContractsMockup() {
   return (
     <div className="flex items-center justify-center h-full">
       <div className="relative">
-        <Figma className="w-16 h-16 text-zinc-400" />
+        <Shield className="w-16 h-16 text-emerald-400/50" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <span className="text-[10px] text-emerald-400 font-bold">✓</span>
+        </div>
       </div>
     </div>
   )
@@ -190,7 +188,7 @@ function ApiMockup() {
   return (
     <div className="flex items-center justify-center h-full">
       <div className="bg-zinc-800/50 rounded-lg px-4 py-2 border border-zinc-700/50">
-        <span className="text-xs font-mono text-zinc-400">SPRINT API</span>
+        <span className="text-xs font-mono text-indigo-400">GALACTIC API</span>
       </div>
     </div>
   )
@@ -198,18 +196,18 @@ function ApiMockup() {
 
 function CardMockup({ type }: { type: string }) {
   switch (type) {
-    case "intercom":
-      return <IntercomMockup />
-    case "github":
-      return <GitHubMockup />
-    case "mobile":
-      return <MobileMockup />
-    case "asks":
-      return <AsksMockup />
-    case "integrations":
-      return <IntegrationsMockup />
-    case "figma":
-      return <FigmaMockup />
+    case "jssdk":
+      return <JsSdkMockup />
+    case "reactsdk":
+      return <ReactSdkMockup />
+    case "checkout":
+      return <CheckoutMockup />
+    case "mcp":
+      return <McpMockup />
+    case "multichain":
+      return <MultichainMockup />
+    case "contracts":
+      return <ContractsMockup />
     case "api":
       return <ApiMockup />
     default:
@@ -243,25 +241,24 @@ export function WorkflowsSection() {
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-16">
           <div className="lg:max-w-xl">
-            {/* Orange indicator */}
+            {/* Indigo indicator */}
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-2 h-2 rounded-full bg-orange-500" />
-              <span className="text-sm text-zinc-400">Workflows and integrations</span>
+              <div className="w-2 h-2 rounded-full bg-indigo-500" />
+              <span className="text-sm text-zinc-400">SDKs & developer tools</span>
               <ChevronRight className="w-4 h-4 text-zinc-600" />
             </div>
 
             {/* Heading */}
             <h2 className="text-4xl md:text-5xl font-medium text-white leading-[1.1]">
-              Collaborate across
+              Integrate in minutes,
               <br />
-              tools and teams
+              scale to millions
             </h2>
           </div>
 
           {/* Description */}
           <p className="text-zinc-400 lg:max-w-sm lg:pt-12">
-            Expand the capabilities of the Sprint system with a wide variety of integrations that keep everyone in your
-            organization aligned and focused.
+            SDKs for every language, plug-and-play UI components, Payment MCP server, and a powerful API — everything you need to monetize your dApp.
           </p>
         </div>
 
