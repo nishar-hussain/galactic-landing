@@ -7,8 +7,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Galactic — The Monetization Layer for Web3',
-  description: 'Multi-chain stablecoin billing infrastructure with subscriptions, usage metering, entitlements, Payment MCP, and Agent-to-Agent payments.',
+  title: 'Galactic — The Capabilities Protocol for Autonomous Economies',
+  description: 'A peer-to-peer protocol for managing Capabilities — consumable permission states that define who can act, how much, and for how long. Off-chain execution, on-chain settlement, bounded delegation for AI agents.',
   generator: 'v0.app',
   icons: {
     icon: [

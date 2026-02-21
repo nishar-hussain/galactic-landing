@@ -5,69 +5,73 @@ import { ChevronRight, Plus } from "lucide-react"
 
 const featureCards = [
   {
-    title: "Stablecoin subscriptions on any EVM chain",
+    title: "Consumable permission states with four-component structure",
     illustration: (
       <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-lg p-6">
         <div className="flex flex-col gap-3 w-full">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center">
-              <span className="text-blue-400 text-xs font-bold">$</span>
+            <div className="w-6 h-6 rounded-full bg-indigo-500/20 flex items-center justify-center">
+              <span className="text-indigo-400 text-xs font-bold">ID</span>
             </div>
-            <span className="text-zinc-300 text-sm font-medium">USDC</span>
-            <span className="text-emerald-400 text-xs ml-auto">Active</span>
+            <span className="text-zinc-300 text-sm font-medium">Identity</span>
+            <span className="text-zinc-500 text-xs ml-auto font-mono">issuer + owner</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center">
-              <span className="text-green-400 text-xs font-bold">₮</span>
+            <div className="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center">
+              <span className="text-purple-400 text-xs font-bold">⚡</span>
             </div>
-            <span className="text-zinc-300 text-sm font-medium">USDT</span>
-            <span className="text-emerald-400 text-xs ml-auto">Active</span>
+            <span className="text-zinc-300 text-sm font-medium">Permission</span>
+            <span className="text-zinc-500 text-xs ml-auto font-mono">AI_INFER</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded-full bg-amber-500/20 flex items-center justify-center">
-              <span className="text-amber-400 text-xs font-bold">◈</span>
+              <span className="text-amber-400 text-xs font-bold">#</span>
             </div>
-            <span className="text-zinc-300 text-sm font-medium">DAI</span>
-            <span className="text-emerald-400 text-xs ml-auto">Active</span>
+            <span className="text-zinc-300 text-sm font-medium">Accounting</span>
+            <span className="text-zinc-500 text-xs ml-auto font-mono">8420/10000</span>
           </div>
           <div className="mt-2 bg-zinc-800/50 rounded-lg p-3 border border-zinc-700/30">
-            <div className="text-[10px] text-zinc-500 mb-1">Monthly recurring</div>
-            <div className="text-white text-lg font-semibold">$24,500 <span className="text-zinc-500 text-sm font-normal">USDC</span></div>
+            <div className="text-[10px] text-zinc-500 mb-1">Lifecycle</div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className="text-emerald-400 text-sm font-medium">Active</span>
+              <span className="text-zinc-500 text-xs ml-auto">→ Consumed / Revoked / Expired</span>
+            </div>
           </div>
         </div>
       </div>
     ),
   },
   {
-    title: "Usage metering & smart entitlements",
+    title: "12 universal monetization models from one primitive",
     illustration: (
       <div className="relative w-full h-full flex items-center justify-center overflow-hidden p-6">
         <div className="flex flex-col gap-3 w-full">
           <div className="bg-zinc-800/50 rounded-lg p-3 border border-zinc-700/30">
             <div className="flex justify-between items-center mb-2">
-              <span className="text-zinc-400 text-xs">API Calls</span>
-              <span className="text-zinc-300 text-xs">82,340 / 100,000</span>
+              <span className="text-zinc-400 text-xs">Prepaid Credits</span>
+              <span className="text-indigo-400 text-xs">Fixed units ↓</span>
             </div>
             <div className="w-full h-1.5 bg-zinc-700 rounded-full">
-              <div className="h-full bg-indigo-500 rounded-full" style={{ width: "82%" }} />
+              <div className="h-full bg-indigo-500 rounded-full" style={{ width: "35%" }} />
             </div>
           </div>
           <div className="bg-zinc-800/50 rounded-lg p-3 border border-zinc-700/30">
             <div className="flex justify-between items-center mb-2">
-              <span className="text-zinc-400 text-xs">Seats</span>
-              <span className="text-zinc-300 text-xs">18 / 25</span>
+              <span className="text-zinc-400 text-xs">Subscription</span>
+              <span className="text-emerald-400 text-xs">∞ until expiry</span>
             </div>
             <div className="w-full h-1.5 bg-zinc-700 rounded-full">
-              <div className="h-full bg-emerald-500 rounded-full" style={{ width: "72%" }} />
+              <div className="h-full bg-emerald-500 rounded-full" style={{ width: "100%" }} />
             </div>
           </div>
           <div className="bg-zinc-800/50 rounded-lg p-3 border border-zinc-700/30">
             <div className="flex justify-between items-center mb-2">
-              <span className="text-zinc-400 text-xs">Credits</span>
-              <span className="text-amber-400 text-xs">23 remaining</span>
+              <span className="text-zinc-400 text-xs">Periodic Allowance</span>
+              <span className="text-amber-400 text-xs">Renews each interval</span>
             </div>
             <div className="w-full h-1.5 bg-zinc-700 rounded-full">
-              <div className="h-full bg-amber-500 rounded-full" style={{ width: "23%" }} />
+              <div className="h-full bg-amber-500 rounded-full" style={{ width: "68%" }} />
             </div>
           </div>
         </div>
@@ -75,26 +79,26 @@ const featureCards = [
     ),
   },
   {
-    title: "On-chain recurring payments — sign once, auto renew",
+    title: "Proof of Service — off-chain execution, on-chain settlement",
     illustration: (
       <div className="relative w-full h-full flex items-center justify-center overflow-hidden p-6">
         <div className="flex flex-col gap-2 w-full">
           <div className="flex items-center gap-2 bg-zinc-800/50 rounded-lg p-3 border border-zinc-700/30">
-            <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-zinc-300 text-xs">Auto-pull via ERC20 allowance</span>
-          </div>
-          <div className="flex items-center gap-2 bg-zinc-800/50 rounded-lg p-3 border border-zinc-700/30">
             <div className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse" />
-            <span className="text-zinc-300 text-xs">Superfluid streaming</span>
+            <span className="text-zinc-300 text-xs">Provider signs receipt</span>
           </div>
           <div className="flex items-center gap-2 bg-zinc-800/50 rounded-lg p-3 border border-zinc-700/30">
             <div className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
-            <span className="text-zinc-300 text-xs">Account abstraction flow</span>
+            <span className="text-zinc-300 text-xs">User co-signs authorization</span>
+          </div>
+          <div className="flex items-center gap-2 bg-zinc-800/50 rounded-lg p-3 border border-zinc-700/30">
+            <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="text-zinc-300 text-xs">Batch settle via monotonic nonce</span>
           </div>
           <div className="mt-2 text-center">
             <div className="inline-flex items-center gap-1.5 text-emerald-400 text-xs bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/20">
               <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-              Next renewal in 14 days
+              1,247 receipts batched → 1 tx
             </div>
           </div>
         </div>
@@ -130,7 +134,7 @@ export function FeatureCardsSection() {
                 lineHeight: 1.1,
               }}
             >
-              Crypto-native billing infrastructure
+              The Capability Primitive
             </motion.h2>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -140,9 +144,9 @@ export function FeatureCardsSection() {
               className="max-w-md"
             >
               <p className="text-zinc-400 leading-relaxed">
-                Galactic replaces Stripe for Web3. Charge in stablecoins, meter usage on-chain, gate features by subscription, and let AI agents manage billing autonomously.{" "}
+                The fundamental unit of the protocol — a consumable authorization contract defined by Identity, Permission, Accounting, and Lifecycle. Usage is irreversible. Consumption is monotonic.{" "}
                 <a href="#" className="text-white inline-flex items-center gap-1 hover:underline">
-                  View documentation <ChevronRight className="w-4 h-4" />
+                  Read the spec <ChevronRight className="w-4 h-4" />
                 </a>
               </p>
             </motion.div>

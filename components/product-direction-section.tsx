@@ -18,7 +18,7 @@ export function ProductDirectionSection() {
         {/* Section label */}
         <div className="flex items-center gap-2 mb-6">
           <div className="w-3 h-3 rounded-full bg-emerald-500" />
-          <span className="text-zinc-400 text-sm">Multi-chain architecture & plans</span>
+          <span className="text-zinc-400 text-sm">Provider Operations & Trust</span>
           <ChevronRight className="w-4 h-4 text-zinc-500" />
         </div>
 
@@ -32,15 +32,15 @@ export function ProductDirectionSection() {
             lineHeight: 1.1,
           }}
         >
-          Deploy billing across every chain
+          Enterprise control plane with built-in dispute resolution
         </h2>
 
         {/* Description */}
         <p className="text-zinc-400 text-lg max-w-md mb-16">
-          <span className="text-white font-medium">Unified billing API across all EVM chains.</span> Deploy subscription contracts, configure plans, and track revenue — all from one dashboard.
+          <span className="text-white font-medium">Manage products, plans, and customers without changing protocol code.</span> Suspend users, override terms, migrate pricing — with a full audit trail and cryptographic dispute resolution.
         </p>
 
-        {/* 3D Chain Deployment Visualization */}
+        {/* 3D Protocol Layer Visualization */}
         <div
           className="relative w-full mb-16"
           style={{
@@ -86,33 +86,33 @@ export function ProductDirectionSection() {
                 </div>
               </div>
 
-              {/* Chain labels */}
-              <div className="absolute text-zinc-500 text-sm" style={{ left: "8%", top: "80px" }}>
-                ETH
+              {/* Protocol layer labels */}
+              <div className="absolute text-zinc-500 text-sm" style={{ left: "5%", top: "80px" }}>
+                CAPABILITY
               </div>
               <div className="absolute text-zinc-500 text-sm" style={{ left: "18%", top: "55px" }}>
-                BASE
+                MONETIZATION
               </div>
               <div className="absolute text-zinc-500 text-sm" style={{ left: "32%", top: "35px" }}>
-                MATIC
+                VERIFICATION
               </div>
               <div className="absolute text-zinc-500 text-sm" style={{ left: "48%", top: "15px" }}>
-                ARB
+                DELEGATION
               </div>
               <div
                 className="absolute px-3 py-1 rounded-md bg-indigo-500/20 text-indigo-300 text-sm font-medium"
                 style={{ left: "58%", top: "-10px" }}
               >
-                AVAX
+                SETTLEMENT
               </div>
-              <div className="absolute text-zinc-500 text-sm" style={{ left: "70%", top: "-5px" }}>
-                BNB
+              <div className="absolute text-zinc-500 text-sm" style={{ left: "72%", top: "-5px" }}>
+                DISPUTE
               </div>
-              <div className="absolute text-zinc-500/50 text-sm" style={{ left: "88%", top: "-25px" }}>
-                OP
+              <div className="absolute text-zinc-500/50 text-sm" style={{ left: "85%", top: "-25px" }}>
+                ANALYTICS
               </div>
 
-              {/* Contract deployment bars */}
+              {/* Protocol layer bars */}
               <div
                 className="absolute rounded-lg bg-zinc-800/90 border border-zinc-700/50 px-4 py-3 flex items-center gap-3"
                 style={{
@@ -123,7 +123,7 @@ export function ProductDirectionSection() {
                 }}
               >
                 <div className="w-4 h-4 rotate-45 bg-indigo-500/60" />
-                <span className="text-zinc-300 text-sm font-medium">Subscription contracts</span>
+                <span className="text-zinc-300 text-sm font-medium">Capability state machine</span>
                 <div
                   className="absolute w-5 h-5 rotate-45 border-2 border-emerald-500 bg-transparent"
                   style={{ right: "15%", top: "50%", transform: "translateY(-50%) rotate(45deg)" }}
@@ -140,7 +140,7 @@ export function ProductDirectionSection() {
                 }}
               >
                 <div className="w-3 h-3 rotate-45 bg-zinc-600/60" />
-                <span className="text-zinc-500 text-sm">Payment indexer</span>
+                <span className="text-zinc-500 text-sm">Receipt verifier</span>
               </div>
 
               <div
@@ -152,7 +152,7 @@ export function ProductDirectionSection() {
                   height: "48px",
                 }}
               >
-                <span className="text-zinc-400 text-sm">Metering engine</span>
+                <span className="text-zinc-400 text-sm">Nonce settlement engine</span>
                 <div className="flex gap-0.5">
                   <div className="w-2.5 h-2.5 rotate-45 bg-emerald-500/60" />
                   <div className="w-2.5 h-2.5 rotate-45 bg-emerald-500/60" />
@@ -169,7 +169,7 @@ export function ProductDirectionSection() {
                   height: "48px",
                 }}
               >
-                <span className="text-zinc-400 text-sm">A2A settlement layer</span>
+                <span className="text-zinc-400 text-sm">Dispute arbiter</span>
                 <div className="flex gap-0.5">
                   <div className="w-2.5 h-2.5 rotate-45 bg-indigo-500/60" />
                   <div className="w-2.5 h-2.5 rotate-45 bg-indigo-500/60" />
@@ -181,95 +181,94 @@ export function ProductDirectionSection() {
 
         {/* Bottom two-column section */}
         <div className="grid grid-cols-1 md:grid-cols-2">
-          {/* Left column - Plans & Entitlements */}
+          {/* Left column - Provider Operations */}
           <div className="border-t border-r border-b border-zinc-800 pt-10 pr-10 pb-16">
-            <h3 className="text-xl font-medium text-zinc-200 mb-3">Plans & entitlements</h3>
+            <h3 className="text-xl font-medium text-zinc-200 mb-3">Provider Operations</h3>
             <p className="text-zinc-500 text-base leading-relaxed mb-8">
-              Define plans, feature access, limits, add-ons, trials, and exceptions — all from the dashboard.
+              The business control plane — manage products, plans, and customers without changing protocol code. Revoke-and-replace, never edit.
             </p>
 
             <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-5">
-              <h4 className="text-lg font-medium text-zinc-200 mb-5">Plan Configuration</h4>
+              <h4 className="text-lg font-medium text-zinc-200 mb-5">Operations Control</h4>
 
-              {/* Plan row */}
+              {/* Operation rows */}
               <div className="flex items-center gap-4 mb-4">
-                <span className="text-zinc-500 text-sm w-20">Plan</span>
+                <span className="text-zinc-500 text-sm w-20">Suspend</span>
+                <div className="flex items-center gap-2">
+                  <span className="flex items-center gap-1.5 px-2 py-1 rounded bg-red-500/20 text-red-300 text-xs">
+                    <span className="w-2 h-2 rounded-full bg-red-500" />
+                    User paused
+                  </span>
+                  <span className="flex items-center gap-1.5 px-2 py-1 rounded bg-zinc-800 text-zinc-300 text-xs">
+                    Capabilities frozen
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4 mb-4">
+                <span className="text-zinc-500 text-sm w-20">Override</span>
                 <div className="flex items-center gap-2">
                   <span className="flex items-center gap-1.5 px-2 py-1 rounded bg-indigo-500/20 text-indigo-300 text-xs">
                     <span className="w-2 h-2 rounded-full bg-indigo-500" />
-                    Pro
-                  </span>
-                  <span className="flex items-center gap-1.5 px-2 py-1 rounded bg-zinc-800 text-zinc-300 text-xs">
-                    500 USDC/mo
-                  </span>
-                </div>
-              </div>
-
-              {/* Features row */}
-              <div className="flex items-center gap-4 mb-4">
-                <span className="text-zinc-500 text-sm w-20">Features</span>
-                <div className="flex items-center gap-2">
-                  <span className="flex items-center gap-1.5 px-2 py-1 rounded bg-zinc-800 text-zinc-300 text-xs">
-                    ✓ API access
+                    Enterprise
                   </span>
                   <span className="flex items-center gap-1.5 px-2 py-1 rounded bg-zinc-800 text-zinc-400 text-xs">
-                    ✓ Webhooks
+                    Custom terms applied
                   </span>
                 </div>
               </div>
 
-              {/* Limits row */}
               <div className="flex items-start gap-4">
-                <span className="text-zinc-500 text-sm w-20 pt-1">Limits</span>
+                <span className="text-zinc-500 text-sm w-20 pt-1">Migrate</span>
                 <div className="flex flex-col gap-2">
                   <span className="flex items-center gap-2 text-zinc-300 text-sm">
                     <span className="w-2.5 h-2.5 rotate-45 bg-indigo-500" />
-                    API Calls <span className="text-zinc-500">100,000/mo</span>
+                    Revoke old capability
                   </span>
                   <span className="flex items-center gap-2 text-zinc-300 text-sm">
-                    <span className="w-2.5 h-2.5 rotate-45 bg-indigo-500" />
-                    Seats <span className="text-zinc-500">25 included</span>
+                    <span className="w-2.5 h-2.5 rotate-45 bg-emerald-500" />
+                    Issue replacement
                   </span>
                   <span className="flex items-center gap-2 text-zinc-400 text-sm">
                     <span className="w-2.5 h-2.5 rotate-45 border border-zinc-500 bg-transparent" />
-                    Storage <span className="text-zinc-500">10 GB</span>
+                    Clear audit history
                   </span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right column - Smart Feature Flags */}
+          {/* Right column - Dispute Resolution */}
           <div className="border-t border-b border-zinc-800 pt-10 pl-10 pb-16">
-            <h3 className="text-xl font-medium text-zinc-200 mb-3">Smart feature flags</h3>
+            <h3 className="text-xl font-medium text-zinc-200 mb-3">Dispute Resolution</h3>
             <p className="text-zinc-500 text-base leading-relaxed mb-8">
-              Gate features based on subscription status, usage limits, on-chain balance, or NFT ownership.
+              Challenge Window activates when settlement contradicts signed evidence. Highest Valid State Wins — economic bonds discourage fraud.
             </p>
 
             <div className="relative h-48">
-              {/* Blocked card (back) */}
+              {/* Rejected card (back) */}
               <div
                 className="absolute rounded-lg bg-zinc-800/40 border border-zinc-700/30 px-4 py-2"
                 style={{ top: 0, left: "10%", width: "80%" }}
               >
                 <span className="flex items-center gap-2 text-zinc-500 text-sm">
                   <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-                  Blocked — Quota exceeded
+                  Rejected — Forfeited bond
                 </span>
               </div>
 
-              {/* Limited card (middle) */}
+              {/* Challenged card (middle) */}
               <div
                 className="absolute rounded-lg bg-zinc-800/60 border border-zinc-700/40 px-4 py-2"
                 style={{ top: "30px", left: "5%", width: "85%" }}
               >
                 <span className="flex items-center gap-2 text-zinc-400 text-sm">
                   <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
-                  Limited — 80% usage reached
+                  Challenge Window — 24h remaining
                 </span>
               </div>
 
-              {/* Allowed card (front) */}
+              {/* Settled card (front) */}
               <div
                 className="absolute rounded-xl bg-zinc-800/90 border border-zinc-700/50 px-5 py-4"
                 style={{ top: "60px", left: 0, width: "95%" }}
@@ -280,10 +279,10 @@ export function ProductDirectionSection() {
                       <path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z" />
                     </svg>
                   </span>
-                  <span className="text-emerald-500 font-medium text-sm">Allowed</span>
+                  <span className="text-emerald-500 font-medium text-sm">Settled</span>
                 </div>
-                <p className="text-zinc-300 text-sm mb-3">Feature: <span className="font-mono text-indigo-300">advanced_analytics</span></p>
-                <span className="text-zinc-500 text-xs">Checked: subscription active + within quota</span>
+                <p className="text-zinc-300 text-sm mb-3">Rule: <span className="font-mono text-indigo-300">Highest Valid State Wins</span></p>
+                <span className="text-zinc-500 text-xs">Nonce 1,247 accepted · Both bonds returned</span>
               </div>
             </div>
           </div>
@@ -293,27 +292,27 @@ export function ProductDirectionSection() {
           {/* Left column - Feature list */}
           <div className="border-r border-zinc-800 pt-16 pr-10 pb-16 flex flex-col justify-center">
             <h3 className="text-2xl font-medium text-zinc-200 mb-8 leading-tight">
-              Configure and launch
+              Deterministic protocol,
               <br />
-              pricing instantly
+              no manual intervention
             </h3>
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-3">
                 <div className="w-1 h-5 rounded-full bg-emerald-500" />
-                <span className="text-zinc-200 font-medium">No-code pricing changes</span>
+                <span className="text-zinc-200 font-medium">Immutable capability lifecycle</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-1 h-5 rounded-full bg-emerald-500/50" />
-                <span className="text-zinc-400">Trial & promotion management</span>
+                <span className="text-zinc-400">Cryptographic receipt settlement</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-1 h-5 rounded-full bg-emerald-500/30" />
-                <span className="text-zinc-500">No smart contract redeploy needed</span>
+                <span className="text-zinc-500">On-chain dispute arbiter</span>
               </div>
             </div>
           </div>
 
-          {/* Right column - Pricing mockup */}
+          {/* Right column - Economic Intelligence */}
           <div className="pt-10 pl-10 pb-16">
             <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 overflow-hidden">
               {/* Header */}
@@ -321,9 +320,9 @@ export function ProductDirectionSection() {
                 <svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M3.5 2A1.5 1.5 0 002 3.5v9A1.5 1.5 0 003.5 14h9a1.5 1.5 0 001.5-1.5v-9A1.5 1.5 0 0012.5 2h-9z" />
                 </svg>
-                <span>Plans</span>
+                <span>Intelligence</span>
                 <span className="text-zinc-600">›</span>
-                <span>Pro Plan</span>
+                <span>Economic Metrics</span>
                 <span className="ml-auto text-zinc-600">•••</span>
               </div>
 
@@ -338,29 +337,29 @@ export function ProductDirectionSection() {
 
                 {/* Title */}
                 <div className="mb-3 relative inline-block">
-                  <span className="text-zinc-200 text-lg font-medium">Pro Plan</span>
-                  <span className="relative mx-2">
-                    <span className="text-zinc-200 text-lg font-medium bg-indigo-500/20 px-0.5">Configuration</span>
+                  <span className="text-zinc-200 text-lg font-medium">Economic </span>
+                  <span className="relative">
+                    <span className="text-zinc-200 text-lg font-medium bg-indigo-500/20 px-0.5">Intelligence</span>
                   </span>
                 </div>
 
-                {/* Pricing details */}
+                {/* Metrics */}
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center justify-between bg-zinc-800/30 rounded-lg px-3 py-2">
-                    <span className="text-zinc-400 text-sm">Base price</span>
-                    <span className="text-white text-sm font-medium">500 USDC/mo</span>
+                    <span className="text-zinc-400 text-sm">Unused Liability</span>
+                    <span className="text-amber-300 text-sm font-medium">$12,340</span>
                   </div>
                   <div className="flex items-center justify-between bg-zinc-800/30 rounded-lg px-3 py-2">
-                    <span className="text-zinc-400 text-sm">Overage rate</span>
-                    <span className="text-white text-sm font-medium">$0.001/call</span>
+                    <span className="text-zinc-400 text-sm">Burn Rate</span>
+                    <span className="text-white text-sm font-medium">2.4 days to exhaustion</span>
                   </div>
                   <div className="flex items-center justify-between bg-zinc-800/30 rounded-lg px-3 py-2">
-                    <span className="text-zinc-400 text-sm">Chains</span>
-                    <span className="text-indigo-300 text-sm">All EVM</span>
+                    <span className="text-zinc-400 text-sm">Spend Velocity</span>
+                    <span className="text-emerald-300 text-sm">Normal</span>
                   </div>
-                  <div className="flex items-center justify-between bg-emerald-500/10 rounded-lg px-3 py-2 border border-emerald-500/20">
-                    <span className="text-emerald-400 text-sm">Trial</span>
-                    <span className="text-emerald-300 text-sm font-medium">14 days free</span>
+                  <div className="flex items-center justify-between bg-amber-500/10 rounded-lg px-3 py-2 border border-amber-500/20">
+                    <span className="text-amber-400 text-sm">Task Efficiency</span>
+                    <span className="text-amber-300 text-sm font-medium">⚠ Agent loop detected</span>
                   </div>
                 </div>
               </div>
@@ -369,7 +368,7 @@ export function ProductDirectionSection() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16">
-          {/* Multi-chain */}
+          {/* Capability Engine */}
           <div>
             <div className="flex items-center gap-2 mb-3">
               <svg
@@ -383,12 +382,12 @@ export function ProductDirectionSection() {
                 <circle cx="10" cy="10" r="4" />
                 <circle cx="10" cy="10" r="1" fill="currentColor" />
               </svg>
-              <span className="text-zinc-200 font-medium">Multi-chain</span>
+              <span className="text-zinc-200 font-medium">Capability Engine</span>
             </div>
-            <p className="text-zinc-500 text-sm leading-relaxed">Deploy contracts across all EVM chains from one API.</p>
+            <p className="text-zinc-500 text-sm leading-relaxed">Deterministic state machine for permission lifecycle management.</p>
           </div>
 
-          {/* Stablecoin payments */}
+          {/* Monotonic Nonces */}
           <div>
             <div className="flex items-center gap-2 mb-3">
               <svg
@@ -401,21 +400,21 @@ export function ProductDirectionSection() {
                 <circle cx="10" cy="10" r="8" />
                 <path d="M2 10h16M10 2a15 15 0 010 16M10 2a15 15 0 000 16" />
               </svg>
-              <span className="text-zinc-200 font-medium">Stablecoin payments</span>
+              <span className="text-zinc-200 font-medium">Monotonic Nonces</span>
             </div>
-            <p className="text-zinc-500 text-sm leading-relaxed">Accept USDC, USDT, DAI across any chain.</p>
+            <p className="text-zinc-500 text-sm leading-relaxed">Prevent replay attacks with strictly increasing counter-based proofs.</p>
           </div>
 
-          {/* Audited contracts */}
+          {/* Cryptographic Receipts */}
           <div>
             <div className="flex items-center gap-2 mb-3">
               <div className="w-4 h-4 rotate-45 bg-zinc-400" />
-              <span className="text-zinc-200 font-medium">Audited contracts</span>
+              <span className="text-zinc-200 font-medium">Dual Signatures</span>
             </div>
-            <p className="text-zinc-500 text-sm leading-relaxed">Enterprise-grade security with multi-sig treasury.</p>
+            <p className="text-zinc-500 text-sm leading-relaxed">Provider + user co-signed receipts as proof of service.</p>
           </div>
 
-          {/* Revenue analytics */}
+          {/* Economic Bonds */}
           <div>
             <div className="flex items-center gap-2 mb-3">
               <svg className="w-5 h-5 text-zinc-400" viewBox="0 0 20 20" fill="currentColor">
@@ -424,9 +423,9 @@ export function ProductDirectionSection() {
                 <rect x="12" y="8" width="3" height="10" rx="1" />
                 <rect x="17" y="4" width="3" height="14" rx="1" />
               </svg>
-              <span className="text-zinc-200 font-medium">Revenue analytics</span>
+              <span className="text-zinc-200 font-medium">Economic Bonds</span>
             </div>
-            <p className="text-zinc-500 text-sm leading-relaxed">Track MRR, churn, usage, and expansion in USDC.</p>
+            <p className="text-zinc-500 text-sm leading-relaxed">Both parties deposit bonds; loser forfeits to discourage fraud.</p>
           </div>
         </div>
       </div>

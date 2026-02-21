@@ -1,66 +1,66 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronLeft, ChevronRight, Plus, ArrowRight, Wallet, Code2, Bot, Puzzle, Shield } from "lucide-react"
+import { ChevronLeft, ChevronRight, ArrowRight, Plus, Code2, Shield, Key, GitBranch, Scale, Activity } from "lucide-react"
 
 const carouselCards = [
   {
     id: 1,
-    category: "JavaScript / TypeScript SDK",
-    title: "Integrate billing in 5 lines of code",
+    category: "TypeScript SDK",
+    title: "Issue and manage capabilities in 5 lines of code",
     icon: ArrowRight,
-    mockup: "jssdk",
+    mockup: "tssdk",
   },
   {
     id: 2,
     category: "React SDK",
-    title: "Drop-in checkout, pricing tables, and portals",
+    title: "Drop-in capability gating and delegation UI components",
     icon: Plus,
     mockup: "reactsdk",
   },
   {
     id: 3,
-    category: "Checkout Widget",
-    title: "Wallet connect + stablecoin payment in one component",
+    category: "Receipt Verifier",
+    title: "Validate dual-signed usage receipts before settlement",
     icon: ArrowRight,
-    mockup: "checkout",
+    mockup: "verifier",
   },
   {
     id: 4,
-    category: "Payment MCP",
-    title: "Let AI agents manage billing autonomously",
+    category: "Agent SDK",
+    title: "Bounded delegation for autonomous AI agents",
     icon: ArrowRight,
-    mockup: "mcp",
+    mockup: "agentsdk",
   },
   {
     id: 5,
-    category: "Multi-Chain Support",
-    title: "Deploy on Ethereum, Base, Polygon, Arbitrum, and more",
+    category: "Nonce Manager",
+    title: "Monotonic nonce tracking and batch optimization",
     icon: ArrowRight,
-    mockup: "multichain",
+    mockup: "nonce",
   },
   {
     id: 6,
-    category: "Smart Contracts",
-    title: "Audited subscription and escrow contracts",
+    category: "Settlement Batcher",
+    title: "Batch thousands of off-chain receipts into single tx",
     icon: ArrowRight,
-    mockup: "contracts",
+    mockup: "batcher",
   },
   {
     id: 7,
-    category: "REST & GraphQL API",
-    title: "Full programmatic control over billing infrastructure",
+    category: "Dispute CLI",
+    title: "Challenge settlements and manage economic bonds",
     icon: ArrowRight,
-    mockup: "api",
+    mockup: "dispute",
   },
 ]
 
-function JsSdkMockup() {
+function TsSdkMockup() {
   return (
     <div className="flex flex-col gap-2 p-4 font-mono text-[11px]">
       <div className="flex items-center gap-2 text-xs text-zinc-400 mb-1">
         <Code2 className="w-3.5 h-3.5" />
-        <span>galactic.ts</span>
+        <span>capability.ts</span>
       </div>
       <div>
         <span className="text-purple-400">import</span>
@@ -70,24 +70,29 @@ function JsSdkMockup() {
       </div>
       <div className="mt-1">
         <span className="text-purple-400">const</span>
-        <span className="text-amber-300"> client</span>
-        <span className="text-zinc-400"> = </span>
-        <span className="text-cyan-300">Galactic</span>
-        <span className="text-zinc-400">(</span>
-        <span className="text-green-400">&apos;sk_live_...&apos;</span>
-        <span className="text-zinc-400">)</span>
-      </div>
-      <div className="mt-1">
-        <span className="text-purple-400">const</span>
-        <span className="text-amber-300"> allowed</span>
+        <span className="text-amber-300"> cap</span>
         <span className="text-zinc-400"> = </span>
         <span className="text-purple-400">await</span>
-        <span className="text-cyan-300"> client</span>
-        <span className="text-zinc-400">.checkEntitlement(</span>
+        <span className="text-cyan-300"> galactic</span>
+        <span className="text-zinc-400">.issue({"{"}</span>
       </div>
       <div className="pl-4">
-        <span className="text-green-400">&apos;api_access&apos;</span>
-        <span className="text-zinc-400">, wallet)</span>
+        <span className="text-amber-300">permission</span>
+        <span className="text-zinc-400">: </span>
+        <span className="text-green-400">&apos;AI_INFER&apos;</span>
+        <span className="text-zinc-400">,</span>
+      </div>
+      <div className="pl-4">
+        <span className="text-amber-300">units</span>
+        <span className="text-zinc-400">: </span>
+        <span className="text-amber-300">10000</span>
+        <span className="text-zinc-400">,</span>
+      </div>
+      <div className="pl-4">
+        <span className="text-amber-300">expiry</span>
+        <span className="text-zinc-400">: </span>
+        <span className="text-green-400">&apos;30d&apos;</span>
+        <span className="text-zinc-400"> {"}"})</span>
       </div>
     </div>
   )
@@ -98,26 +103,28 @@ function ReactSdkMockup() {
     <div className="flex flex-col gap-2 p-4 font-mono text-[11px]">
       <div className="flex items-center gap-2 text-xs text-zinc-400 mb-1">
         <Code2 className="w-3.5 h-3.5 text-cyan-400" />
-        <span>PricingTable.tsx</span>
+        <span>CapabilityGate.tsx</span>
       </div>
       <div>
         <span className="text-zinc-400">&lt;</span>
-        <span className="text-cyan-300">GalacticPricing</span>
+        <span className="text-cyan-300">CapabilityGate</span>
       </div>
       <div className="pl-4">
-        <span className="text-amber-300">chain</span>
+        <span className="text-amber-300">permission</span>
         <span className="text-zinc-400">=</span>
-        <span className="text-green-400">&quot;base&quot;</span>
+        <span className="text-green-400">&quot;AI_INFER&quot;</span>
       </div>
       <div className="pl-4">
-        <span className="text-amber-300">currency</span>
-        <span className="text-zinc-400">=</span>
-        <span className="text-green-400">&quot;USDC&quot;</span>
+        <span className="text-amber-300">minUnits</span>
+        <span className="text-zinc-400">={"{"}</span>
+        <span className="text-amber-300">100</span>
+        <span className="text-zinc-400">{"}"}</span>
       </div>
       <div className="pl-4">
-        <span className="text-amber-300">theme</span>
-        <span className="text-zinc-400">=</span>
-        <span className="text-green-400">&quot;dark&quot;</span>
+        <span className="text-amber-300">fallback</span>
+        <span className="text-zinc-400">={"{"}</span>
+        <span className="text-cyan-300">&lt;UpgradePrompt /&gt;</span>
+        <span className="text-zinc-400">{"}"}</span>
       </div>
       <div>
         <span className="text-zinc-400">/&gt;</span>
@@ -126,69 +133,66 @@ function ReactSdkMockup() {
   )
 }
 
-function CheckoutMockup() {
-  return (
-    <div className="flex items-center justify-center h-full p-4">
-      <div className="w-full max-w-[200px] bg-zinc-900 rounded-xl border border-zinc-700 p-4">
-        <div className="text-center mb-3">
-          <Wallet className="w-6 h-6 text-indigo-400 mx-auto mb-2" />
-          <div className="text-zinc-300 text-xs font-medium">Pay with wallet</div>
-        </div>
-        <div className="bg-zinc-800/50 rounded-lg px-3 py-2 text-center mb-2">
-          <span className="text-white text-sm font-semibold">500 USDC</span>
-        </div>
-        <div className="bg-indigo-500/20 rounded-lg px-3 py-1.5 text-center">
-          <span className="text-indigo-300 text-[10px]">Connect Wallet</span>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function McpMockup() {
+function VerifierMockup() {
   return (
     <div className="flex items-center justify-center h-full p-4">
       <div className="text-center">
-        <Bot className="w-10 h-10 text-indigo-400 mx-auto mb-2" />
-        <div className="text-zinc-300 text-xs font-medium mb-1">Payment MCP</div>
-        <div className="text-zinc-500 text-[10px]">AI-native billing API</div>
+        <Shield className="w-10 h-10 text-emerald-400 mx-auto mb-2" />
+        <div className="text-zinc-300 text-xs font-medium mb-1">Receipt Verifier</div>
+        <div className="text-zinc-500 text-[10px]">Dual-signature validation</div>
       </div>
     </div>
   )
 }
 
-function MultichainMockup() {
+function AgentSdkMockup() {
   return (
-    <div className="flex items-center justify-center h-full">
-      <div className="grid grid-cols-2 gap-2">
-        {["ETH", "BASE", "MATIC", "ARB"].map((chain) => (
-          <div key={chain} className="w-12 h-12 rounded-lg bg-zinc-800/50 flex items-center justify-center border border-zinc-700/30">
-            <span className="text-[10px] text-zinc-400 font-medium">{chain}</span>
-          </div>
-        ))}
+    <div className="flex items-center justify-center h-full p-4">
+      <div className="text-center">
+        <Key className="w-10 h-10 text-indigo-400 mx-auto mb-2" />
+        <div className="text-zinc-300 text-xs font-medium mb-1">Agent SDK</div>
+        <div className="text-zinc-500 text-[10px]">Bounded capability slices</div>
       </div>
     </div>
   )
 }
 
-function ContractsMockup() {
+function NonceMockup() {
   return (
     <div className="flex items-center justify-center h-full">
-      <div className="relative">
-        <Shield className="w-16 h-16 text-emerald-400/50" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-[10px] text-emerald-400 font-bold">✓</span>
+      <div className="flex flex-col items-center gap-2">
+        <div className="flex gap-1">
+          {[1245, 1246, 1247].map((n) => (
+            <div key={n} className="w-12 h-12 rounded-lg bg-zinc-800/50 flex items-center justify-center border border-zinc-700/30">
+              <span className="text-[10px] text-zinc-400 font-mono">{n}</span>
+            </div>
+          ))}
         </div>
+        <span className="text-[10px] text-zinc-500">monotonic ↑</span>
       </div>
     </div>
   )
 }
 
-function ApiMockup() {
+function BatcherMockup() {
   return (
     <div className="flex items-center justify-center h-full">
-      <div className="bg-zinc-800/50 rounded-lg px-4 py-2 border border-zinc-700/50">
-        <span className="text-xs font-mono text-indigo-400">GALACTIC API</span>
+      <div className="text-center">
+        <GitBranch className="w-10 h-10 text-purple-400 mx-auto mb-2" />
+        <div className="text-zinc-300 text-xs font-medium mb-1">Settlement Batcher</div>
+        <div className="text-zinc-500 text-[10px]">1000s receipts → 1 tx</div>
+      </div>
+    </div>
+  )
+}
+
+function DisputeMockup() {
+  return (
+    <div className="flex items-center justify-center h-full">
+      <div className="text-center">
+        <Scale className="w-10 h-10 text-amber-400 mx-auto mb-2" />
+        <div className="text-zinc-300 text-xs font-medium mb-1">Dispute CLI</div>
+        <div className="text-zinc-500 text-[10px]">Challenge & bond mgmt</div>
       </div>
     </div>
   )
@@ -196,20 +200,20 @@ function ApiMockup() {
 
 function CardMockup({ type }: { type: string }) {
   switch (type) {
-    case "jssdk":
-      return <JsSdkMockup />
+    case "tssdk":
+      return <TsSdkMockup />
     case "reactsdk":
       return <ReactSdkMockup />
-    case "checkout":
-      return <CheckoutMockup />
-    case "mcp":
-      return <McpMockup />
-    case "multichain":
-      return <MultichainMockup />
-    case "contracts":
-      return <ContractsMockup />
-    case "api":
-      return <ApiMockup />
+    case "verifier":
+      return <VerifierMockup />
+    case "agentsdk":
+      return <AgentSdkMockup />
+    case "nonce":
+      return <NonceMockup />
+    case "batcher":
+      return <BatcherMockup />
+    case "dispute":
+      return <DisputeMockup />
     default:
       return null
   }
@@ -244,7 +248,7 @@ export function WorkflowsSection() {
             {/* Indigo indicator */}
             <div className="flex items-center gap-2 mb-6">
               <div className="w-2 h-2 rounded-full bg-indigo-500" />
-              <span className="text-sm text-zinc-400">SDKs & developer tools</span>
+              <span className="text-sm text-zinc-400">Protocol SDKs & developer tools</span>
               <ChevronRight className="w-4 h-4 text-zinc-600" />
             </div>
 
@@ -258,7 +262,7 @@ export function WorkflowsSection() {
 
           {/* Description */}
           <p className="text-zinc-400 lg:max-w-sm lg:pt-12">
-            SDKs for every language, plug-and-play UI components, Payment MCP server, and a powerful API — everything you need to monetize your dApp.
+            SDKs for every language, capability gating components, receipt verification, agent delegation tools, and settlement batchers — everything for the autonomous economy.
           </p>
         </div>
 
@@ -283,7 +287,7 @@ export function WorkflowsSection() {
                     />
                   </div>
 
-                  {/* Card footer - refactored for proper icon alignment */}
+                  {/* Card footer */}
                   <div className="p-4 border-t border-zinc-800/30">
                     <div className="flex items-center justify-between gap-3">
                       {/* Text content */}
@@ -291,7 +295,7 @@ export function WorkflowsSection() {
                         <p className="text-xs text-zinc-500 mb-1">{card.category}</p>
                         <p className="text-sm text-zinc-200 leading-snug">{card.title}</p>
                       </div>
-                      {/* Icon button - fixed size, vertically centered */}
+                      {/* Icon button */}
                       <button className="flex-shrink-0 w-8 h-8 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-500 hover:text-zinc-300 hover:border-zinc-600 transition-colors">
                         <card.icon className="w-4 h-4" />
                       </button>

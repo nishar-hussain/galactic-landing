@@ -4,23 +4,21 @@ import type React from "react"
 import { motion } from "framer-motion"
 import {
   BarChart3,
-  CreditCard,
-  Layers,
-  Settings,
-  Users,
-  Wallet,
   ChevronDown,
   ChevronRight,
   Hexagon,
   Search,
-  Plus,
-  Link2,
   MoreHorizontal,
   Zap,
   HelpCircle,
   Shield,
-  Globe,
-  Bot,
+  Settings,
+  Key,
+  GitBranch,
+  Users,
+  Scale,
+  Activity,
+  Lock,
 } from "lucide-react"
 
 export function DashboardMockup() {
@@ -84,132 +82,120 @@ export function DashboardMockup() {
         {/* Main nav */}
         <div className="px-3 space-y-0.5">
           <NavItem icon={BarChart3} label="Overview" active />
-          <NavItem icon={CreditCard} label="Subscriptions" badge={12} />
+          <NavItem icon={Key} label="Capabilities" badge={8} />
         </div>
 
-        {/* Billing section */}
+        {/* Protocol section */}
         <div className="mt-5 px-3">
           <div className="px-2 py-1 text-[10px] text-zinc-500 font-medium uppercase tracking-wider flex items-center gap-1">
-            Billing
+            Protocol
           </div>
           <div className="space-y-0.5 mt-1">
-            <NavItem icon={Wallet} label="Payments" hasSubmenu />
-            <NavItem icon={Layers} label="Plans" hasSubmenu />
-            <NavItem icon={Zap} label="Metering" hasSubmenu />
-            <NavItem icon={Shield} label="Entitlements" hasSubmenu />
+            <NavItem icon={GitBranch} label="Delegation" hasSubmenu />
+            <NavItem icon={Shield} label="Verification" hasSubmenu />
+            <NavItem icon={Lock} label="Settlement" hasSubmenu />
+            <NavItem icon={Scale} label="Disputes" hasSubmenu />
           </div>
         </div>
 
-        {/* Integrations section */}
+        {/* Intelligence section */}
         <div className="mt-5 px-3">
           <div className="px-2 py-1 text-[10px] text-zinc-500 font-medium uppercase tracking-wider flex items-center gap-1">
-            AI & Agents
+            Intelligence
           </div>
           <div className="space-y-0.5 mt-1">
-            <NavItem icon={Bot} label="Payment MCP" color="text-indigo-400" />
-            <NavItem icon={Users} label="A2A Payments" color="text-emerald-400" />
-            <NavItem icon={Globe} label="Multi-Chain" color="text-orange-400" />
-          </div>
-        </div>
-
-        {/* Chains section */}
-        <div className="mt-5 px-3 flex-1">
-          <div className="px-2 py-1 text-[10px] text-zinc-500 font-medium uppercase tracking-wider flex items-center gap-1">
-            Chains
-          </div>
-          <div className="space-y-0.5 mt-1">
-            <NavItem icon={Hexagon} label="Ethereum" hasSubmenu />
-            <NavItem icon={Hexagon} label="Base" hasSubmenu />
-            <NavItem icon={Hexagon} label="Polygon" hasSubmenu />
+            <NavItem icon={Activity} label="Analytics" color="text-indigo-400" />
+            <NavItem icon={Users} label="Providers" color="text-emerald-400" />
+            <NavItem icon={Zap} label="Agents" color="text-orange-400" />
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="p-3 border-t border-zinc-800/50">
+        <div className="mt-auto p-3 border-t border-zinc-800/50">
           <NavItem icon={Settings} label="Settings" />
           <NavItem icon={HelpCircle} label="Documentation" />
         </div>
       </motion.div>
 
-      {/* Subscriptions List */}
+      {/* Capabilities List */}
       <motion.div
         className="w-[320px] h-full bg-zinc-900/40 border-r border-zinc-800/50 flex flex-col shrink-0"
         variants={panelVariants}
       >
         <div className="px-4 py-3 border-b border-zinc-800/50 flex items-center justify-between">
-          <h3 className="text-white font-semibold text-sm">Subscriptions</h3>
+          <h3 className="text-white font-semibold text-sm">Capabilities</h3>
           <div className="flex items-center gap-2">
             <button className="text-zinc-500 hover:text-white transition-colors">
-              <Plus className="w-4 h-4" />
+              <Key className="w-4 h-4" />
             </button>
           </div>
         </div>
 
         <div className="flex-1 overflow-auto scrollbar-hide">
-          <SubscriptionItem
-            id="SUB-001"
-            title="DeFi Protocol Alpha"
-            subtitle="Pro Plan · 500 USDC/mo"
+          <CapabilityItem
+            id="CAP-001"
+            title="AI Inference — GPT-4o"
+            subtitle="AI_INFER · 8,420 / 10,000 units"
             time="Active"
-            chain="Ethereum"
+            permType="AI_INFER"
             status="active"
             active
           />
-          <SubscriptionItem
-            id="SUB-002"
-            title="AI Agent Swarm"
-            subtitle="A2A Plan · Usage-based"
+          <CapabilityItem
+            id="CAP-002"
+            title="Storage — IPFS Cluster"
+            subtitle="STORE_BYTES · 2.1 / 5 GB"
             time="Active"
-            chain="Base"
+            permType="STORE"
             status="active"
           />
-          <SubscriptionItem
-            id="SUB-003"
-            title="NFT Marketplace"
-            subtitle="Enterprise · 2,000 USDC/mo"
+          <CapabilityItem
+            id="CAP-003"
+            title="Search — Semantic Index"
+            subtitle="QUERY_DATA · 45,000 / 50,000"
             time="Active"
-            chain="Polygon"
+            permType="QUERY"
             status="active"
           />
-          <SubscriptionItem
-            id="SUB-004"
-            title="DAO Governance Tool"
-            subtitle="Starter · 50 USDC/mo"
-            time="Trial"
-            chain="Arbitrum"
-            status="trial"
-          />
-          <SubscriptionItem
-            id="SUB-005"
-            title="GameFi Studio"
-            subtitle="Pro Plan · 500 USDC/mo"
-            time="Churned"
-            chain="Base"
-            status="churned"
-          />
-          <SubscriptionItem
-            id="SUB-006"
-            title="Data Oracle Network"
-            subtitle="Credit Model · Pay-per-query"
+          <CapabilityItem
+            id="CAP-004"
+            title="Compute — Worker Pool"
+            subtitle="COMPUTE · Subscription tier"
             time="Active"
-            chain="Ethereum"
+            permType="COMPUTE"
             status="active"
           />
-          <SubscriptionItem
-            id="SUB-007"
-            title="Web3 Social App"
-            subtitle="Growth · 200 USDC/mo"
-            time="Active"
-            chain="Polygon"
-            status="active"
+          <CapabilityItem
+            id="DEL-001"
+            title="Agent Slice — Research Bot"
+            subtitle="Delegated · $2.00 budget"
+            time="Bounded"
+            permType="DELEGATE"
+            status="delegated"
           />
-          <SubscriptionItem
-            id="MCP-001"
-            title="Claude Agent Billing"
-            subtitle="MCP Auto · 0.002 USDC/call"
-            time="Active"
-            chain="Base"
-            status="active"
+          <CapabilityItem
+            id="CAP-005"
+            title="Embedding — Vector DB"
+            subtitle="EMBED · 100,000 / 100,000"
+            time="Consumed"
+            permType="EMBED"
+            status="consumed"
+          />
+          <CapabilityItem
+            id="CAP-006"
+            title="Deploy — Smart Contract"
+            subtitle="DEPLOY · Expired 2h ago"
+            time="Expired"
+            permType="DEPLOY"
+            status="expired"
+          />
+          <CapabilityItem
+            id="CAP-007"
+            title="Stream — Realtime Feed"
+            subtitle="STREAM · Revoked by provider"
+            time="Revoked"
+            permType="STREAM"
+            status="revoked"
           />
         </div>
       </motion.div>
@@ -219,121 +205,115 @@ export function DashboardMockup() {
         {/* Header breadcrumb */}
         <div className="px-5 py-3 border-b border-zinc-800/50 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-1.5 text-xs">
-            <span className="text-zinc-500">Subscriptions</span>
+            <span className="text-zinc-500">Capabilities</span>
             <span className="text-zinc-600">›</span>
-            <span className="text-indigo-400">DeFi Protocol Alpha</span>
+            <span className="text-indigo-400">AI Inference — GPT-4o</span>
             <span className="text-zinc-600">›</span>
-            <span className="text-zinc-300">SUB-001</span>
+            <span className="text-zinc-300">CAP-001</span>
           </div>
           <MoreHorizontal className="w-4 h-4 text-zinc-500" />
         </div>
 
         {/* Content */}
         <div className="flex-1 p-5 overflow-auto scrollbar-hide">
-          <h2 className="text-white text-xl font-semibold mb-5">DeFi Protocol Alpha</h2>
+          <h2 className="text-white text-xl font-semibold mb-5">AI Inference — GPT-4o</h2>
 
           {/* Stats Row */}
           <div className="grid grid-cols-3 gap-3 mb-5">
             <div className="bg-zinc-900/80 rounded-lg p-3 border border-zinc-800/50">
-              <p className="text-zinc-500 text-[10px] uppercase tracking-wider mb-1">MRR</p>
-              <p className="text-white text-lg font-semibold">$24,500</p>
-              <p className="text-emerald-400 text-[10px]">↑ 12.5%</p>
+              <p className="text-zinc-500 text-[10px] uppercase tracking-wider mb-1">Consumed</p>
+              <p className="text-white text-lg font-semibold">8,420</p>
+              <p className="text-amber-400 text-[10px]">of 10,000 units</p>
             </div>
             <div className="bg-zinc-900/80 rounded-lg p-3 border border-zinc-800/50">
-              <p className="text-zinc-500 text-[10px] uppercase tracking-wider mb-1">API Calls</p>
-              <p className="text-white text-lg font-semibold">1.2M</p>
-              <p className="text-emerald-400 text-[10px]">↑ 8.3%</p>
+              <p className="text-zinc-500 text-[10px] uppercase tracking-wider mb-1">Nonce</p>
+              <p className="text-white text-lg font-semibold">1,247</p>
+              <p className="text-emerald-400 text-[10px]">↑ monotonic</p>
             </div>
             <div className="bg-zinc-900/80 rounded-lg p-3 border border-zinc-800/50">
-              <p className="text-zinc-500 text-[10px] uppercase tracking-wider mb-1">Active Chains</p>
-              <p className="text-white text-lg font-semibold">6</p>
-              <p className="text-zinc-400 text-[10px]">EVM chains</p>
+              <p className="text-zinc-500 text-[10px] uppercase tracking-wider mb-1">Lifecycle</p>
+              <p className="text-white text-lg font-semibold">Active</p>
+              <p className="text-zinc-400 text-[10px]">12d remaining</p>
             </div>
           </div>
 
-          {/* Plan details */}
+          {/* Capability details */}
           <div className="bg-zinc-900/80 rounded-lg p-4 text-[11px] font-mono mb-5 border border-zinc-800/50">
             <div className="space-y-2">
               <div>
-                <span className="text-purple-400">plan</span>
+                <span className="text-purple-400">id</span>
                 <span className="text-zinc-400">: </span>
-                <span className="text-emerald-400">"Pro"</span>
+                <span className="text-cyan-300">0xc4a1...b7f3</span>
               </div>
               <div>
-                <span className="text-purple-400">price</span>
+                <span className="text-purple-400">issuer</span>
                 <span className="text-zinc-400">: </span>
-                <span className="text-amber-300">500</span>
-                <span className="text-zinc-500"> // USDC per month</span>
+                <span className="text-cyan-300">0x8e2a...3d91</span>
+                <span className="text-zinc-500"> // OpenAI Provider</span>
               </div>
               <div>
-                <span className="text-purple-400">chain</span>
-                <span className="text-zinc-400">: </span>
-                <span className="text-emerald-400">"ethereum"</span>
-              </div>
-              <div>
-                <span className="text-purple-400">features</span>
-                <span className="text-zinc-400">: [</span>
-                <span className="text-emerald-400">"api_access"</span>
-                <span className="text-zinc-400">, </span>
-                <span className="text-emerald-400">"webhooks"</span>
-                <span className="text-zinc-400">, </span>
-                <span className="text-emerald-400">"analytics"</span>
-                <span className="text-zinc-400">]</span>
-              </div>
-              <div>
-                <span className="text-purple-400">metering</span>
-                <span className="text-zinc-400">: {"{"} </span>
-                <span className="text-amber-300">api_calls</span>
-                <span className="text-zinc-400">: </span>
-                <span className="text-amber-300">100000</span>
-                <span className="text-zinc-400">, </span>
-                <span className="text-amber-300">seats</span>
-                <span className="text-zinc-400">: </span>
-                <span className="text-amber-300">25</span>
-                <span className="text-zinc-400"> {"}"}</span>
-              </div>
-              <div>
-                <span className="text-purple-400">wallet</span>
+                <span className="text-purple-400">owner</span>
                 <span className="text-zinc-400">: </span>
                 <span className="text-cyan-300">0x1a2b...9f8e</span>
               </div>
-            </div>
-          </div>
-
-          {/* Meta actions */}
-          <div className="space-y-2 text-sm mb-5">
-            <div className="flex items-center gap-2 text-zinc-500 hover:text-zinc-300 cursor-pointer transition-colors">
-              <Plus className="w-4 h-4" />
-              <span>Add entitlement override</span>
-            </div>
-            <div className="flex items-center gap-2 text-zinc-500 hover:text-zinc-300 cursor-pointer transition-colors">
-              <Link2 className="w-4 h-4" />
-              <span>View on-chain transaction</span>
+              <div>
+                <span className="text-purple-400">permission</span>
+                <span className="text-zinc-400">: </span>
+                <span className="text-emerald-400">&quot;AI_INFER&quot;</span>
+              </div>
+              <div>
+                <span className="text-purple-400">accounting</span>
+                <span className="text-zinc-400">{": { "}</span>
+                <span className="text-amber-300">total</span>
+                <span className="text-zinc-400">: </span>
+                <span className="text-amber-300">10000</span>
+                <span className="text-zinc-400">, </span>
+                <span className="text-amber-300">consumed</span>
+                <span className="text-zinc-400">: </span>
+                <span className="text-amber-300">8420</span>
+                <span className="text-zinc-400">, </span>
+                <span className="text-amber-300">nonce</span>
+                <span className="text-zinc-400">: </span>
+                <span className="text-amber-300">1247</span>
+                <span className="text-zinc-400">{" }"}</span>
+              </div>
+              <div>
+                <span className="text-purple-400">lifecycle</span>
+                <span className="text-zinc-400">{": { "}</span>
+                <span className="text-amber-300">state</span>
+                <span className="text-zinc-400">: </span>
+                <span className="text-emerald-400">&quot;ACTIVE&quot;</span>
+                <span className="text-zinc-400">, </span>
+                <span className="text-amber-300">expiry</span>
+                <span className="text-zinc-400">: </span>
+                <span className="text-emerald-400">&quot;2026-03-05&quot;</span>
+                <span className="text-zinc-400">{" }"}</span>
+              </div>
             </div>
           </div>
 
           {/* Activity */}
           <div className="pt-4 border-t border-zinc-800/50">
-            <div className="text-xs text-zinc-500 font-medium mb-3 uppercase tracking-wider">Payment Activity</div>
+            <div className="text-xs text-zinc-500 font-medium mb-3 uppercase tracking-wider">Settlement Activity</div>
             <div className="space-y-3">
               <ActivityItem
-                name="Auto-renewal"
-                action="charged"
-                from="500 USDC"
-                to="via Ethereum"
-                time="2 days ago"
+                name="Receipt batch"
+                action="settled"
+                from="342 units"
+                to="nonce 1247"
+                time="2 hours ago"
               />
               <ActivityItem
-                name="MCP Agent"
-                action="checked entitlement"
-                from="api_access"
+                name="Agent delegation"
+                action="issued slice"
+                from="500 units"
                 time="5 hours ago"
               />
               <ActivityItem
-                name="Usage meter"
-                action="recorded"
-                from="12,340 API calls"
-                time="1 hour ago"
+                name="Verification"
+                action="mutual receipt"
+                from="signed by both"
+                time="6 hours ago"
               />
             </div>
           </div>
@@ -360,9 +340,8 @@ function NavItem({
 }) {
   return (
     <div
-      className={`flex items-center gap-2 px-2 py-1.5 rounded-md cursor-pointer transition-colors ${
-        active ? "bg-zinc-800 text-white" : "text-zinc-400 hover:bg-zinc-800/50 hover:text-zinc-300"
-      }`}
+      className={`flex items-center gap-2 px-2 py-1.5 rounded-md cursor-pointer transition-colors ${active ? "bg-zinc-800 text-white" : "text-zinc-400 hover:bg-zinc-800/50 hover:text-zinc-300"
+        }`}
     >
       <Icon className={`w-4 h-4 ${color || ""}`} />
       <span className="flex-1 text-xs">{label}</span>
@@ -376,12 +355,12 @@ function NavItem({
   )
 }
 
-function SubscriptionItem({
+function CapabilityItem({
   id,
   title,
   subtitle,
   time,
-  chain,
+  permType,
   status,
   active,
 }: {
@@ -389,38 +368,41 @@ function SubscriptionItem({
   title: string
   subtitle?: string
   time?: string
-  chain?: string
+  permType?: string
   status: string
   active?: boolean
 }) {
   const statusColors: Record<string, string> = {
     active: "bg-emerald-500",
-    trial: "bg-amber-500",
-    churned: "bg-red-500",
-    paused: "bg-zinc-500",
+    delegated: "bg-indigo-500",
+    consumed: "bg-amber-500",
+    expired: "bg-zinc-500",
+    revoked: "bg-red-500",
   }
 
-  const chainColors: Record<string, string> = {
-    Ethereum: "text-blue-400",
-    Base: "text-indigo-400",
-    Polygon: "text-purple-400",
-    Arbitrum: "text-cyan-400",
+  const permColors: Record<string, string> = {
+    AI_INFER: "text-indigo-400",
+    STORE: "text-emerald-400",
+    QUERY: "text-cyan-400",
+    COMPUTE: "text-purple-400",
+    DELEGATE: "text-indigo-400",
+    EMBED: "text-amber-400",
+    DEPLOY: "text-orange-400",
+    STREAM: "text-pink-400",
   }
 
   return (
     <div
-      className={`px-4 py-3 border-b border-zinc-800/30 cursor-pointer transition-colors ${
-        active ? "bg-zinc-800/50" : "hover:bg-zinc-800/30"
-      }`}
+      className={`px-4 py-3 border-b border-zinc-800/30 cursor-pointer transition-colors ${active ? "bg-zinc-800/50" : "hover:bg-zinc-800/30"
+        }`}
     >
       <div className="flex items-start gap-3">
         <div className="w-8 h-8 rounded-lg bg-zinc-800 border border-zinc-700/50 flex items-center justify-center shrink-0 mt-0.5">
-          <Hexagon className="w-4 h-4 text-indigo-400" />
+          <Key className={`w-4 h-4 ${permColors[permType || ""] || "text-indigo-400"}`} />
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-0.5">
             {id && <span className="text-zinc-500 text-[10px]">{id}</span>}
-            {chain && <span className={`text-[10px] ${chainColors[chain] || "text-zinc-400"}`}>{chain}</span>}
             <div className={`w-2 h-2 rounded-full ${statusColors[status] || "bg-zinc-500"}`} />
           </div>
           <p className="text-white text-xs truncate leading-tight">{title}</p>

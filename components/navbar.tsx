@@ -13,13 +13,13 @@ export function Navbar() {
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#" className="text-sm text-zinc-400 hover:text-white transition-colors">
-              Product
+              Protocol
             </a>
             <a href="#" className="text-sm text-zinc-400 hover:text-white transition-colors">
               Developers
             </a>
             <a href="#" className="text-sm text-zinc-400 hover:text-white transition-colors">
-              Pricing
+              Whitepaper
             </a>
             <a href="#" className="text-sm text-zinc-400 hover:text-white transition-colors">
               Docs
@@ -36,7 +36,7 @@ export function Navbar() {
               href="#"
               className="text-sm text-white bg-indigo-600 hover:bg-indigo-500 px-3.5 py-1.5 rounded-md border border-indigo-500 transition-colors"
             >
-              Get started
+              Launch App
             </a>
           </div>
         </div>

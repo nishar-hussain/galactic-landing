@@ -2,9 +2,9 @@ import { Hexagon } from "lucide-react"
 
 export function Footer() {
   const footerLinks = {
-    Platform: ["Subscriptions", "Payments", "Metering", "Entitlements", "Multi-Chain", "Payment MCP", "A2A Payments"],
+    Protocol: ["Capabilities", "Delegation", "Settlement", "Disputes", "Analytics", "Verification"],
     Developers: ["Documentation", "API Reference", "SDKs", "Changelog", "Status", "GitHub"],
-    Chains: ["Ethereum", "Base", "Polygon", "Arbitrum", "Avalanche", "Optimism"],
+    Ecosystem: ["AI Agents", "DeFi", "Storage", "Compute", "Inference", "Search"],
     Company: ["About", "Blog", "Careers", "Customers", "Brand", "Contact"],
     Legal: ["Privacy", "Terms", "DPA", "Security", "Report Vulnerability"],
   }
